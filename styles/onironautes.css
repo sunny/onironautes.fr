@@ -224,7 +224,7 @@ strong {
 
 .dream__img--helmet {
   top: 16em;
-  left: calc(50% - 2.75em);
+  left: calc(50% - 1.8em);
   width: 3em;
   z-index: var(--z-helmet);
 }
