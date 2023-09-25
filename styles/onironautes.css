@@ -94,7 +94,7 @@ a {
 }
 
 p {
-  padding: .5em 0;
+  margin: .5em 0;
   line-height: 1.2;
 }
 
@@ -332,6 +332,11 @@ strong {
   max-width: 200px;
 }
 
+.pairs__illustration--fish {
+  margin-top: 2em;
+  align-self: flex-start;
+}
+
 .pairs__text {
   flex: 1;
   padding: 1em;
@@ -364,11 +369,25 @@ strong {
 }
 
 .pairs__title {
+  margin-bottom: .75em;
   text-transform: uppercase;
   font-size: 2em;
-  margin-bottom: 1em;
   color: var(--accent);
 }
+
+.event {
+  margin-top: 1em;
+}
+.event summary {
+  cursor: pointer;
+}
+.event__date {
+  text-transform: uppercase;
+  font-size: 1em;
+  color: var(--accent);
+  font-weight: normal;
+}
+
 
 .outro {
   text-align: center;
