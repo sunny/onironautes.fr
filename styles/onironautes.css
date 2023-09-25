@@ -168,6 +168,13 @@ strong {
   font-size: 1.2em;
   letter-spacing: .1em;
 }
+@media (width < 500px) {
+  .dream__the {
+    font-size: 1.5em;
+    margin-top: -.2em;
+    margin-left: -1em;
+  }
+}
 
 .dream__letter {
   display: inline-block;
@@ -309,6 +316,13 @@ strong {
   z-index: var(--z-subtitle);
 }
 
+@media (width < 500px) {
+  .dream__subtitle {
+    margin-top: 5em;
+    font-size: 1.75em;
+  }
+}
+
 .content {
   max-width: 400px;
   margin: 1em auto;
@@ -325,22 +339,47 @@ strong {
   view-timeline-axis: block;
 }
 
+@media (width < 500px) {
+  .pairs {
+    flex-direction: column;
+  }
+}
+
 .pairs__illustration {
+  width: 100%;
+  max-width: 200px;
   flex: .75;
   position: relative;
   padding-right: 1em;
-  max-width: 200px;
+}
+@media (width < 500px) {
+  .pairs__illustration {
+    flex: 1;
+    max-width: 75vw;
+    padding: 0;
+    text-align: center;
+  }
 }
 
 .pairs__illustration--fish {
   margin-top: 2em;
   align-self: flex-start;
 }
+@media (width < 500px) {
+  .pairs__illustration--fish {
+    margin-top: 1rem;
+  }
+}
 
 .pairs__text {
   flex: 1;
   padding: 1em;
   max-width: 400px;
+}
+@media (width < 500px) {
+  .pairs__text {
+    order: 1;
+  }
 }
 
 .pairs__img {
@@ -350,6 +389,13 @@ strong {
   animation-timeline: --revealing-image;
   animation-range: entry 0% cover 50%;
 }
+
+@media (width < 500px) {
+  .pairs__img {
+    width: 75%;
+  }
+}
+
 .pairs__img--flower1 {
   margin-right: -20%;
   animation-name: slide-from-right;
@@ -366,6 +412,12 @@ strong {
 .pairs__img--cloud1 {
   margin-left: -20%;
   animation-name: slide-from-left;
+}
+
+@media (width < 500px) {
+  .pairs__img {
+    margin: 0;
+  }
 }
 
 .pairs__title {
