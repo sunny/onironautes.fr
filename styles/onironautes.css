@@ -24,7 +24,7 @@
   --z-letter-t: 110;
   --z-letter-e: 120;
   --z-letter-s: 130;
-  --z-bird: 130;
+  --z-paper-bird: 130;
   --z-cloud2b: 140;
   --z-subtitle: 150;
 }
@@ -35,24 +35,32 @@
   60% { background-color: var(--dark); }
 }
 
-@keyframes image-hide {
-  90% { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-5em); opacity: 0; }
+@keyframes image-rise {
+  from { transform: translateY(0); }
+  to { transform: translateY(-3em); }
 }
 
 @keyframes slide-from-left {
-  from { transform: translateX(-20%) }
-  to { transform: translateX(0) }
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes wriggle-from-left {
+  from { transform: translateX(-100%) translateY(-8%); }
+  20% { transform: translateX(-80%) translateY(8%); }
+  40% { transform: translateX(-60%) translateY(-8%); }
+  60% { transform: translateX(-40%) translateY(8%); }
+  80% { transform: translateX(-20%) translateY(-8%); }
+  to { transform: translateX(0) translateY(0); }
 }
 
 @keyframes slide-from-right {
-  from { transform: translateX(20%) }
-  to { transform: translateX(0) }
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
 }
 
 @keyframes image-jump {
-  from { transform: translateY(100%); }
-  to { transform: translateY(5%); }
+  from { transform: translateY(100%); filter: saturate(0); }
+  to { transform: translateY(5%); filter: saturate(1); }
 }
 
 @keyframes align-top {
@@ -184,19 +192,13 @@ strong {
 .dream__letter--e { top: 1.3em; z-index: var(--z-letter-e); }
 .dream__letter--s { top: 1.6em; z-index: var(--z-letter-s); }
 
-.dream__subtitle {
-  position: relative;
-  margin: 6em 0 1em;
-  font-size: 1.3em;
-  z-index: var(--z-subtitle);
-}
-
 .dream__img {
   position: absolute;
   height: auto;
 
-  animation: image-hide linear;
+  animation: image-rise ease-out;
   animation-timeline: --dream;
+  animation-range: cover 60% cover 100%;
 }
 
 .dream__img--flower1 {
@@ -208,28 +210,22 @@ strong {
 
 .dream__img--moon {
   top: 14em;
-  right: calc(50% + 1em);
+  right: calc(50% + 0em);
   width: 10em;
   z-index: var(--z-moon);
 }
 
 .dream__img--pink-suit {
   top: 15.25em;
-  left: calc(50% - 9.25em);
+  left: calc(50% - 8em);
   width: 13em;
-  animation: move-left ease-in-out;
-  animation-timeline: --dream;
-  animation-range: cover 20%;
   z-index: var(--z-pink-suit);
 }
 
 .dream__img--helmet {
   top: 16em;
-  left: calc(50% - 3em);
+  left: calc(50% - 2.75em);
   width: 3em;
-  /* animation: move-left ease-in-out; */
-  /* animation-timeline: --dream; */
-  /* animation-range: cover 20%; */
   z-index: var(--z-helmet);
 }
 
@@ -237,7 +233,6 @@ strong {
   top: 3em;
   right: calc(50% - 10em);
   width: 3.5em;
-  animation: 8s floating infinite ease-in-out alternate;
 }
 
 .dream__img--baloon2 {
@@ -251,16 +246,13 @@ strong {
   top: 21.7em;
   right: calc(50% - 9em);
   width: 5em;
-  animation: 10s floating infinite ease-in-out alternate;
-  animation: move-right ease-in-out;
-  animation-timeline: --dream;
-  animation-range: cover 20%;
   z-index: var(--z-paper-bird);
+  animation-range: cover 70% cover 100%;
 }
 
 .dream__img--bulb {
   top: 9.25em;
-  right: calc(50% - 8em);
+  right: calc(50% - 8.5em);
   width: 3em;
   z-index: var(--z-bulb);
 }
@@ -276,43 +268,46 @@ strong {
   top: 7em;
   right: calc(50% - 3em);
   width: 5em;
-  animation: 10s floating infinite ease-in-out alternate;
   z-index: var(--z-cloud1);
+  animation: 10s floating infinite ease-in-out alternate
 }
 
 .dream__img--cloud1b {
   top: 19em;
-  right: calc(50% - 3.5em);
+  right: calc(50% - 5em);
   width: 6em;
   animation: 10s floating infinite ease-in-out alternate;
 }
 
 .dream__img--cloud2 {
   top: 14.5em;
-  right: calc(50% - 2.5em);
+  right: calc(50% - 3em);
   width: 5.5em;
-  animation: 13s floating infinite ease-in-out alternate;
   z-index: var(--z-cloud2);
+  animation: 13s floating infinite ease-in-out alternate;
 }
 
 .dream__img--cloud2b {
   top: 25em;
   right: calc(50% - -2.5em);
   width: 7.5em;
-  animation: 7s floating infinite ease-in-out alternate;
   z-index: var(--z-cloud2b);
+  animation-range: cover 40% cover 100%;
 }
 
 .dream__img--fish {
   top: 13.5em;
   right: calc(50% - 8em);
   width: 5em;
-  animation: move-right ease-in-out;
-  animation-timeline: --dream;
-  animation-range: cover 20%;
   z-index: var(--z-fish);
 }
 
+.dream__subtitle {
+  position: relative;
+  margin: 6em 0 1em;
+  font-size: 1.3em;
+  z-index: var(--z-subtitle);
+}
 
 .content {
   max-width: 400px;
@@ -321,7 +316,7 @@ strong {
 }
 
 .pairs {
-  margin: 2em 0;
+  margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,19 +341,26 @@ strong {
 .pairs__img {
   width: 120%;
   height: auto;
-  animation: auto ease-in-out both;
+  animation: auto ease-out;
   animation-timeline: --revealing-image;
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 0% cover 50%;
 }
-.pairs__img--flower2 { width: 175px; }
-
-.pairs__illustration:first-child .pairs__img {
-  margin-left: -20%;
-  animation-name: slide-from-left;
-}
-.pairs__illustration:last-child .pairs__img {
+.pairs__img--flower1 {
   margin-right: -20%;
   animation-name: slide-from-right;
+}
+.pairs__img--fish {
+  margin-left: -20%;
+  animation-name: wriggle-from-left;
+}
+.pairs__img--flower2 {
+  width: 175px;
+  margin-right: -20%;
+  animation-name: slide-from-right;
+}
+.pairs__img--cloud1 {
+  margin-left: -20%;
+  animation-name: slide-from-left;
 }
 
 .pairs__title {
