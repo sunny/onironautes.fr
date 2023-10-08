@@ -310,6 +310,7 @@ summary {
   margin: 6em 0 1em;
   font-size: 1.3em;
   z-index: var(--z-subtitle);
+  text-shadow: 1px 1px .5em var(--dark);
 }
 
 @media (width < 500px) {
