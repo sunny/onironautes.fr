@@ -9,7 +9,6 @@
 
   --z-fish: 10;
   --z-letter-o: 20;
-  --z-bulb: 30;
   --z-flower2: 40;
   --z-flower1: 50;
   --z-letter-n2: 55;
@@ -259,13 +258,6 @@ summary {
   width: 5em;
   z-index: var(--z-paper-bird);
   animation-range: cover 70% cover 100%;
-}
-
-.dream__img--bulb {
-  top: 9.25em;
-  right: calc(50% - 8.5em);
-  width: 3em;
-  z-index: var(--z-bulb);
 }
 
 .dream__img--flower2 {
