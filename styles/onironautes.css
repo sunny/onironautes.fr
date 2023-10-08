@@ -378,7 +378,8 @@ summary {
 .pairs__text {
   flex: 1;
   padding: 1em;
-  max-width: 400px;
+  max-width: 450px;
+  font-size: 1.25rem;
 }
 @media (width < 500px) {
   .pairs__text {
@@ -427,16 +428,23 @@ summary {
 .pairs__title {
   margin-bottom: .75em;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.75em;
   color: var(--accent);
 }
 
+.event__location {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin-bottom: .5rem;
+}
 .event {
-  padding: .25em 0;
+  margin-top: .5rem;
 }
 .event--next {
-  padding-right: .5em;
-  border-right: 5px solid var(--accent);
+  margin-top: 1rem;
+}
+.event[open] {
+  margin-bottom: 1rem;
 }
 
 .event__date {
@@ -452,6 +460,15 @@ summary {
 }
 .event:not(.event--past):hover summary {
   color: var(--accent);
+}
+
+.event__badge {
+  text-transform: uppercase;
+  font-size: .75em;
+  background: var(--accent);
+  color: var(--dark);
+  padding: .2em .25em 0 0.25em;
+  border-radius: .2em;
 }
 .event > p {
   margin-left: 1em;
