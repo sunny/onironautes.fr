@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+git push && ssh sunfox 'cd /var/www/onironautes.fr/ && git pull'

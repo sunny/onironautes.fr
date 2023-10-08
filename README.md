@@ -2,14 +2,14 @@
 
 ## Local development
 
-Launch a server on http://localhost:8080 with:
+Launch a server on http://localhost:8080 (requires Python 3) with:
 
 ```sh
-python3 -m http.server 8080
+bin/dev
 ```
 
 ## Deploy
 
 ```sh
-git push && ssh sunfox 'cd /var/www/onironautes.fr/ && git pull'
+bin/deploy
 ```
