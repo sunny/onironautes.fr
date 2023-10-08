@@ -106,6 +106,10 @@ strong {
   font-weight: bolder;
 }
 
+summary {
+  cursor: pointer;
+}
+
 /* Page */
 
 .coat {
@@ -428,18 +432,30 @@ strong {
 }
 
 .event {
-  margin-top: 1em;
+  padding: .25em 0;
 }
-.event summary {
-  cursor: pointer;
+.event--next {
+  padding-right: .5em;
+  border-right: 5px solid var(--accent);
 }
+
 .event__date {
   text-transform: uppercase;
   font-size: 1em;
-  color: var(--accent);
   font-weight: normal;
 }
-
+.event--past .event__date {
+  text-decoration: line-through;
+}
+.event:not(.event--past) .event__date {
+  color: var(--accent);
+}
+.event:not(.event--past):hover summary {
+  color: var(--accent);
+}
+.event > p {
+  margin-left: 1em;
+}
 
 .outro {
   text-align: center;
