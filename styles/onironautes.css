@@ -456,15 +456,6 @@ summary {
   color: var(--accent);
 }
 
-.event__badge {
-  text-transform: uppercase;
-  font-size: .75em;
-  background: var(--accent);
-  color: var(--dark);
-  padding: .2em .25em 0 0.25em;
-  border-radius: .2em;
-}
-
 .event__directions svg {
   fill: currentColor;
   vertical-align: bottom;
