@@ -19,6 +19,4 @@ function handleEvents() {
   })
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  handleEvents()
-})
+handleEvents()
