@@ -430,14 +430,15 @@ summary {
   font-size: 1.25em;
   margin-bottom: .5rem;
 }
+
 .event {
-  margin-top: .5rem;
-}
-.event--next {
   margin-top: 1rem;
 }
+.event--next {
+  margin-top: 2rem;
+}
 .event[open] {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .event__date {
@@ -448,10 +449,10 @@ summary {
 .event--past .event__date {
   text-decoration: line-through;
 }
-.event:not(.event--past) .event__date {
-  color: var(--accent);
+.event--past a {
+  color: currentColor;
 }
-.event:not(.event--past):hover summary {
+.event:not(.event--past) .event__date {
   color: var(--accent);
 }
 
@@ -463,11 +464,19 @@ summary {
   padding: .2em .25em 0 0.25em;
   border-radius: .2em;
 }
+
+.event__directions svg {
+  fill: currentColor;
+  vertical-align: bottom;
+  height: 1.2em;
+}
+
 .event > p {
   margin-left: 1em;
 }
 
 .outro {
+  margin-top: 100px;
   text-align: center;
   view-timeline-name: --outro;
   view-timeline-axis: block;
