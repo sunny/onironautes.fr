@@ -465,6 +465,12 @@ summary {
 .event > p {
   margin-left: 1em;
 }
+.event add-to-calendar-button {
+  margin-left: .5em;
+}
+.event--past add-to-calendar-button {
+  display: none;
+}
 
 .outro {
   margin-top: 100px;
