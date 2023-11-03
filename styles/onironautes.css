@@ -109,6 +109,11 @@ summary {
   cursor: pointer;
 }
 
+svg {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
 /* Page */
 
 .coat {
@@ -457,7 +462,6 @@ summary {
 }
 
 .event__directions svg {
-  fill: currentColor;
   vertical-align: bottom;
   height: 1.2em;
 }
