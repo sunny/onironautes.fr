@@ -465,7 +465,9 @@ svg {
   vertical-align: bottom;
   height: 1.2em;
 }
-
+.event > summary {
+  text-transform: uppercase;
+}
 .event > p {
   margin-left: 1em;
 }
