@@ -1,19 +1,24 @@
 #!/usr/bin/env bash
 
 name=`basename "$1"`
+newname="$2"
 
 echo "--------> WEBM"
 ffmpeg -i "$1" \
        -f webm \
        -vcodec libvpx-vp9 \
        -vb 1024k \
-       "videos/$name.webm"
+       "videos/$newname.webm"
 
 echo
 echo "--------> MP4"
-ffmpeg -i "$1".wmv \
-       -vcodec libx264 \
+ffmpeg -i "$1" \
        -f mp4 \
-       -vb 1024k \
+       -vf format=yuv420p \
+       -c:v libx264 \
+       -c:a aac \
+       -profile:v main \
+       -level 3.1 \
+       -movflags +faststart \
        -preset slow \
-       "videos/$name.mp4"
+       "videos/$newname.mp4"

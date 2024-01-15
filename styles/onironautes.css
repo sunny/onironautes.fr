@@ -124,6 +124,10 @@ svg {
   animation-timeline: view();
 }
 
+.coat:has(video:playing) {
+  background: black;
+}
+
 .dream {
   padding: 50px 0;
   font-size: 1rem;
