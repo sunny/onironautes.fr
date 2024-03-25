@@ -82,7 +82,12 @@
 @layer base {
   body {
     font-family: Lato, Roboto, sans-serif;
-    font-size: 18px;
+    accent-color: var(--accent);
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--dark);
   }
 
   a {
