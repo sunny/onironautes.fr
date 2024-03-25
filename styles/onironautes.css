@@ -1,6 +1,6 @@
-@import url("/styles/reset.css");
-/* TODO: Use async link rel instead */
-/* @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap"); */
+@layer reset, base, page;
+
+@import "reset.css" layer(reset);
 
 :root {
   --light: #d1c8bc;
@@ -79,430 +79,427 @@
   to { transform: translateX(10%); }
 }
 
-/* Base */
+@layer base {
+  body {
+    font-family: Lato, Roboto, sans-serif;
+    font-size: 18px;
+  }
 
-body {
-  font-family: Lato, Roboto, sans-serif;
-  font-size: 18px;
+  a {
+    color: var(--accent);
+    text-underline-offset: .25em;
+    text-decoration-thickness: .1em;
+  }
+
+  p {
+    margin: .5em 0;
+    line-height: 1.2;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  strong {
+    font-weight: bolder;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  svg {
+    vertical-align: middle;
+    fill: currentColor;
+  }
 }
 
-a {
-  color: var(--accent);
-  text-underline-offset: .25em;
-  text-decoration-thickness: .1em;
-}
+@layer page {
 
-p {
-  margin: .5em 0;
-  line-height: 1.2;
-}
+  .coat {
+    padding-top: 3rem;
+    background: var(--dark);
+    color: var(--light);
+    animation: background-change linear;
+    animation-timeline: view();
+  }
 
-i, em {
-  font-style: italic;
-}
+  .coat:has(video:playing) {
+    background: black;
+  }
 
-strong {
-  font-weight: bolder;
-}
-
-summary {
-  cursor: pointer;
-}
-
-svg {
-  vertical-align: middle;
-  fill: currentColor;
-}
-
-/* Page */
-
-.coat {
-  padding-top: 3rem;
-  background: var(--dark);
-  color: var(--light);
-  animation: background-change linear;
-  animation-timeline: view();
-}
-
-.coat:has(video:playing) {
-  background: black;
-}
-
-.dream {
-  padding: 50px 0;
-  font-size: 1rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-
-  view-timeline-name: --dream;
-  view-timeline-axis: block;
-}
-@media (width > 500px) {
   .dream {
-    font-size: 1.5rem;
+    padding: 50px 0;
+    font-size: 1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    view-timeline-name: --dream;
+    view-timeline-axis: block;
   }
-}
-@media (width > 600px) {
-  .dream {
-    font-size: 1.75rem;
+  @media (width > 500px) {
+    .dream {
+      font-size: 1.5rem;
+    }
   }
-}
-@media (width > 700px) {
-  .dream {
-    font-size: 2rem;
+  @media (width > 600px) {
+    .dream {
+      font-size: 1.75rem;
+    }
   }
-}
-
-.dream__title {
-  display: flex;
-  flex-direction: column;
-}
-
-.dream__line {
-  display: flex;
-  justify-content: center;
-  margin: 1em 0;
-}
-.dream__line--1 {
-  margin: 2em 0 0;
-}
-.dream__line--3 {
-  margin: -.5em 0 3em 0;
-}
-
-.dream__the {
-  text-decoration: underline;
-  text-underline-offset: .25em;
-  text-decoration-thickness: 0.075em;
-  font-size: 1.2em;
-  letter-spacing: .1em;
-}
-@media (width < 500px) {
-  .dream__the {
-    font-size: 1.5em;
-    margin-top: -.2em;
-    margin-left: -1em;
+  @media (width > 700px) {
+    .dream {
+      font-size: 2rem;
+    }
   }
-}
 
-.dream__letter {
-  display: inline-block;
-  position: relative;
-  padding: .05em;
-  font-size: 5em;
-
-  /* animation: align-top linear;
-  animation-timeline: --dream;
-  animation-range: entry 90% cover 90%; */
-}
-.dream__letter--O { top: 0; }
-.dream__letter--n { top: .35em; }
-.dream__letter--i { top: .65em; z-index: var(--z-letter-i); }
-.dream__letter--r { top: .9em; }
-.dream__letter--o { top: 1.3em; z-index: var(--z-letter-o); }
-
-.dream__letter--n2 { top: 0; z-index: var(--z-letter-n2); }
-.dream__letter--a { top: .35em; z-index: var(--z-letter-a); }
-.dream__letter--u { top: .65em; z-index: var(--z-letter-u); }
-.dream__letter--t { top: .9em; z-index: var(--z-letter-t); }
-.dream__letter--e { top: 1.3em; z-index: var(--z-letter-e); }
-.dream__letter--s { top: 1.6em; z-index: var(--z-letter-s); }
-
-.dream__img {
-  position: absolute;
-  height: auto;
-
-  animation: image-rise ease-out;
-  animation-timeline: --dream;
-  animation-range: cover 60% cover 100%;
-}
-
-.dream__img--flower1 {
-  top: 9em;
-  left: calc(50% - 11em);
-  width: 7.5em;
-  z-index: var(--z-flower1);
-}
-
-.dream__img--moon {
-  top: 14em;
-  right: calc(50% + 0em);
-  width: 10em;
-  z-index: var(--z-moon);
-}
-
-.dream__img--pink-suit {
-  top: 15.25em;
-  left: calc(50% - 8em);
-  width: 13em;
-  z-index: var(--z-pink-suit);
-}
-
-.dream__img--helmet {
-  top: 16em;
-  left: calc(50% - 1.8em);
-  width: 3em;
-  z-index: var(--z-helmet);
-}
-
-.dream__img--baloon1 {
-  top: 3em;
-  right: calc(50% - 10em);
-  width: 3.5em;
-}
-
-.dream__img--baloon2 {
-  top: 3.75em;
-  right: calc(50% - 6em);
-  width: 5.75em;
-  animation: 5s floating infinite ease-in-out alternate;
-}
-
-.dream__img--paper-bird {
-  top: 21.7em;
-  right: calc(50% - 9em);
-  width: 5em;
-  z-index: var(--z-paper-bird);
-  animation-range: cover 70% cover 100%;
-}
-
-.dream__img--flower2 {
-  top: 12.5em;
-  right: calc(50% - 2.5em);
-  width: 3.75em;
-  z-index: var(--z--flower2);
-}
-
-.dream__img--cloud1 {
-  top: 7em;
-  right: calc(50% - 3em);
-  width: 5em;
-  z-index: var(--z-cloud1);
-  animation: 10s floating infinite ease-in-out alternate
-}
-
-.dream__img--cloud1b {
-  top: 19em;
-  right: calc(50% - 5em);
-  width: 6em;
-  animation: 10s floating infinite ease-in-out alternate;
-}
-
-.dream__img--cloud2 {
-  top: 14.5em;
-  right: calc(50% - 3em);
-  width: 5.5em;
-  z-index: var(--z-cloud2);
-  animation: 13s floating infinite ease-in-out alternate;
-}
-
-.dream__img--cloud2b {
-  top: 25em;
-  right: calc(50% - -2.5em);
-  width: 7.5em;
-  z-index: var(--z-cloud2b);
-  animation-range: cover 40% cover 100%;
-}
-
-.dream__img--fish {
-  top: 13.5em;
-  right: calc(50% - 8em);
-  width: 5em;
-  z-index: var(--z-fish);
-}
-
-.dream__subtitle {
-  position: relative;
-  margin: 6em 0 1em;
-  font-size: 1.3em;
-  z-index: var(--z-subtitle);
-  text-shadow: 1px 1px .5em var(--dark);
-}
-
-@media (width < 500px) {
-  .dream__subtitle {
-    margin-top: 5em;
-    font-size: 1.75em;
-  }
-}
-
-.content {
-  max-width: 400px;
-  margin: 1em auto;
-  padding: 1em;
-}
-
-.pairs {
-  margin-bottom: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  view-timeline-name: --revealing-image;
-  view-timeline-axis: block;
-}
-
-@media (width < 500px) {
-  .pairs {
+  .dream__title {
+    display: flex;
     flex-direction: column;
   }
-}
 
-.pairs__illustration {
-  width: 100%;
-  max-width: 200px;
-  flex: .75;
-  position: relative;
-  padding-right: 1em;
-}
-@media (width < 500px) {
-  .pairs__illustration {
-    flex: 1;
-    max-width: 75vw;
-    padding: 0;
-    text-align: center;
+  .dream__line {
+    display: flex;
+    justify-content: center;
+    margin: 1em 0;
   }
-}
+  .dream__line--1 {
+    margin: 2em 0 0;
+  }
+  .dream__line--3 {
+    margin: -.5em 0 3em 0;
+  }
 
-.pairs__illustration--fish {
-  margin-top: 2em;
-  align-self: flex-start;
-}
-@media (width < 500px) {
+  .dream__the {
+    text-decoration: underline;
+    text-underline-offset: .25em;
+    text-decoration-thickness: 0.075em;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+  }
+  @media (width < 500px) {
+    .dream__the {
+      font-size: 1.5em;
+      margin-top: -.2em;
+      margin-left: -1em;
+    }
+  }
+
+  .dream__letter {
+    display: inline-block;
+    position: relative;
+    padding: .05em;
+    font-size: 5em;
+  }
+  .dream__letter--O { top: 0; }
+  .dream__letter--n { top: .35em; }
+  .dream__letter--i { top: .65em; z-index: var(--z-letter-i); }
+  .dream__letter--r { top: .9em; }
+  .dream__letter--o { top: 1.3em; z-index: var(--z-letter-o); }
+
+  .dream__letter--n2 { top: 0; z-index: var(--z-letter-n2); }
+  .dream__letter--a { top: .35em; z-index: var(--z-letter-a); }
+  .dream__letter--u { top: .65em; z-index: var(--z-letter-u); }
+  .dream__letter--t { top: .9em; z-index: var(--z-letter-t); }
+  .dream__letter--e { top: 1.3em; z-index: var(--z-letter-e); }
+  .dream__letter--s { top: 1.6em; z-index: var(--z-letter-s); }
+
+  .dream__img {
+    position: absolute;
+    height: auto;
+
+    animation: image-rise ease-out;
+    animation-timeline: --dream;
+    animation-range: cover 60% cover 100%;
+  }
+
+  .dream__img--flower1 {
+    top: 9em;
+    left: calc(50% - 11em);
+    width: 7.5em;
+    z-index: var(--z-flower1);
+  }
+
+  .dream__img--moon {
+    top: 14em;
+    right: calc(50% + 0em);
+    width: 10em;
+    z-index: var(--z-moon);
+  }
+
+  .dream__img--pink-suit {
+    top: 15.25em;
+    left: calc(50% - 8em);
+    width: 13em;
+    z-index: var(--z-pink-suit);
+  }
+
+  .dream__img--helmet {
+    top: 16em;
+    left: calc(50% - 1.8em);
+    width: 3em;
+    z-index: var(--z-helmet);
+  }
+
+  .dream__img--baloon1 {
+    top: 3em;
+    right: calc(50% - 10em);
+    width: 3.5em;
+  }
+
+  .dream__img--baloon2 {
+    top: 3.75em;
+    right: calc(50% - 6em);
+    width: 5.75em;
+    animation: 5s floating infinite ease-in-out alternate;
+  }
+
+  .dream__img--paper-bird {
+    top: 21.7em;
+    right: calc(50% - 9em);
+    width: 5em;
+    z-index: var(--z-paper-bird);
+    animation-range: cover 70% cover 100%;
+  }
+
+  .dream__img--flower2 {
+    top: 12.5em;
+    right: calc(50% - 2.5em);
+    width: 3.75em;
+    z-index: var(--z--flower2);
+  }
+
+  .dream__img--cloud1 {
+    top: 7em;
+    right: calc(50% - 3em);
+    width: 5em;
+    z-index: var(--z-cloud1);
+    animation: 10s floating infinite ease-in-out alternate
+  }
+
+  .dream__img--cloud1b {
+    top: 19em;
+    right: calc(50% - 5em);
+    width: 6em;
+    animation: 10s floating infinite ease-in-out alternate;
+  }
+
+  .dream__img--cloud2 {
+    top: 14.5em;
+    right: calc(50% - 3em);
+    width: 5.5em;
+    z-index: var(--z-cloud2);
+    animation: 13s floating infinite ease-in-out alternate;
+  }
+
+  .dream__img--cloud2b {
+    top: 25em;
+    right: calc(50% - -2.5em);
+    width: 7.5em;
+    z-index: var(--z-cloud2b);
+    animation-range: cover 40% cover 100%;
+  }
+
+  .dream__img--fish {
+    top: 13.5em;
+    right: calc(50% - 8em);
+    width: 5em;
+    z-index: var(--z-fish);
+  }
+
+  .dream__subtitle {
+    position: relative;
+    margin: 6em 0 1em;
+    font-size: 1.3em;
+    z-index: var(--z-subtitle);
+    text-shadow: 1px 1px .5em var(--dark);
+  }
+
+  @media (width < 500px) {
+    .dream__subtitle {
+      margin-top: 5em;
+      font-size: 1.75em;
+    }
+  }
+
+  .content {
+    max-width: 400px;
+    margin: 1em auto;
+    padding: 1em;
+  }
+
+  .pairs {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    view-timeline-name: --revealing-image;
+    view-timeline-axis: block;
+  }
+
+  @media (width < 500px) {
+    .pairs {
+      flex-direction: column;
+    }
+  }
+
+  .pairs__illustration {
+    width: 100%;
+    max-width: 200px;
+    flex: .75;
+    position: relative;
+    padding-right: 1em;
+  }
+  @media (width < 500px) {
+    .pairs__illustration {
+      flex: 1;
+      max-width: 75vw;
+      padding: 0;
+      text-align: center;
+    }
+  }
+
   .pairs__illustration--fish {
+    margin-top: 2em;
+    align-self: flex-start;
+  }
+  @media (width < 500px) {
+    .pairs__illustration--fish {
+      margin-top: 1rem;
+    }
+  }
+
+  .pairs__text {
+    flex: 1;
+    padding: 1em;
+    max-width: 450px;
+    font-size: 1.25rem;
+  }
+  @media (width < 500px) {
+    .pairs__text {
+      order: 1;
+    }
+  }
+
+  .pairs__img {
+    width: 120%;
+    height: auto;
+    animation: auto ease-out;
+    animation-timeline: --revealing-image;
+    animation-range: entry 0% cover 50%;
+  }
+
+  @media (width < 500px) {
+    .pairs__img {
+      width: 75%;
+    }
+  }
+
+  .pairs__img--flower1 {
+    margin-right: -20%;
+    animation-name: slide-from-right;
+  }
+  .pairs__img--fish {
+    margin-left: -20%;
+    animation-name: wriggle-from-left;
+  }
+  .pairs__img--flower2 {
+    width: 175px;
+    margin-right: -20%;
+    animation-name: slide-from-right;
+  }
+  .pairs__img--cloud1 {
+    margin-left: -20%;
+    animation-name: slide-from-left;
+  }
+
+  @media (width < 500px) {
+    .pairs__img {
+      margin: 0;
+    }
+  }
+
+  .pairs__title {
+    margin-bottom: .75em;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    color: var(--accent);
+  }
+
+  .large-content {
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 1em;
+  }
+
+  .large-video {
+    width: 100%;
+    aspect-ratio: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .event__location {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    margin-bottom: .5rem;
+  }
+
+  .event {
     margin-top: 1rem;
   }
-}
-
-.pairs__text {
-  flex: 1;
-  padding: 1em;
-  max-width: 450px;
-  font-size: 1.25rem;
-}
-@media (width < 500px) {
-  .pairs__text {
-    order: 1;
+  .event--next {
+    margin-top: 2rem;
   }
-}
-
-.pairs__img {
-  width: 120%;
-  height: auto;
-  animation: auto ease-out;
-  animation-timeline: --revealing-image;
-  animation-range: entry 0% cover 50%;
-}
-
-@media (width < 500px) {
-  .pairs__img {
-    width: 75%;
+  .event[open] {
+    margin-bottom: 2rem;
   }
-}
 
-.pairs__img--flower1 {
-  margin-right: -20%;
-  animation-name: slide-from-right;
-}
-.pairs__img--fish {
-  margin-left: -20%;
-  animation-name: wriggle-from-left;
-}
-.pairs__img--flower2 {
-  width: 175px;
-  margin-right: -20%;
-  animation-name: slide-from-right;
-}
-.pairs__img--cloud1 {
-  margin-left: -20%;
-  animation-name: slide-from-left;
-}
-
-@media (width < 500px) {
-  .pairs__img {
-    margin: 0;
+  .event__date {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
   }
-}
+  .event--past .event__date {
+    text-decoration: line-through;
+  }
+  .event--past a {
+    color: currentColor;
+  }
+  .event:not(.event--past) .event__date {
+    color: var(--accent);
+  }
 
-.pairs__title {
-  margin-bottom: .75em;
-  text-transform: uppercase;
-  font-size: 1.75em;
-  color: var(--accent);
-}
+  .event__directions svg {
+    vertical-align: bottom;
+    height: 1.2em;
+  }
+  .event > summary {
+    text-transform: uppercase;
+  }
+  .event > p {
+    margin-left: 1em;
+  }
+  .event add-to-calendar-button {
+    margin-left: .5em;
+  }
+  .event--past add-to-calendar-button {
+    display: none;
+  }
 
-.large-content {
-  max-width: 700px;
-  margin: 1rem auto;
-  padding: 1em;
-}
+  .outro {
+    margin-top: 100px;
+    text-align: center;
+    view-timeline-name: --outro;
+    view-timeline-axis: block;
+  }
 
-.large-video {
-  width: 100%;
-  aspect-ratio: 1.8;
-  margin-bottom: 2rem;
-}
-
-.event__location {
-  text-transform: uppercase;
-  font-size: 1.25em;
-  margin-bottom: .5rem;
-}
-
-.event {
-  margin-top: 1rem;
-}
-.event--next {
-  margin-top: 2rem;
-}
-.event[open] {
-  margin-bottom: 2rem;
-}
-
-.event__date {
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-}
-.event--past .event__date {
-  text-decoration: line-through;
-}
-.event--past a {
-  color: currentColor;
-}
-.event:not(.event--past) .event__date {
-  color: var(--accent);
-}
-
-.event__directions svg {
-  vertical-align: bottom;
-  height: 1.2em;
-}
-.event > summary {
-  text-transform: uppercase;
-}
-.event > p {
-  margin-left: 1em;
-}
-.event add-to-calendar-button {
-  margin-left: .5em;
-}
-.event--past add-to-calendar-button {
-  display: none;
-}
-
-.outro {
-  margin-top: 100px;
-  text-align: center;
-  view-timeline-name: --outro;
-  view-timeline-axis: block;
-}
-
-.outro__img {
-  animation: auto ease-in-out image-jump both;
-  animation-timeline: --outro;
-  animation-range: entry 80%;
+  .outro__img {
+    animation: auto ease-in-out image-jump both;
+    animation-timeline: --outro;
+    animation-range: entry 80%;
+  }
 }
