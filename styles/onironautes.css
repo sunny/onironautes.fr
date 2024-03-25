@@ -1,4 +1,4 @@
-@layer reset, base, page;
+@layer reset, base, page, interaction;
 
 @import "reset.css" layer(reset);
 
@@ -119,18 +119,14 @@
   }
 }
 
-@layer page {
 
-  .coat {
+@layer page {
+  body {
     padding-top: 3rem;
     background: var(--dark);
     color: var(--light);
     animation: background-change linear;
     animation-timeline: view();
-  }
-
-  .coat:has(video:playing) {
-    background: black;
   }
 
   .dream {
@@ -506,5 +502,21 @@
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
     animation-range: entry 80%;
+  }
+}
+
+@layer interaction {
+  /* Hide all other content when a video is playing */
+  body > :not(:has(video)) {
+    transition: opacity .5s, filter .5s;
+  }
+
+  body.is-video-playing {
+    background: black;
+  }
+
+  body.is-video-playing > :not(:has(video)) {
+    opacity: .5;
+    filter: blur(2px) grayscale(1) saturate(0);
   }
 }
