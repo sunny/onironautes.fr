@@ -2,84 +2,13 @@
 
 @import "reset.css" layer(reset);
 
-:root {
-  --light: #d1c8bc;
-  --dark: #0a0a2a;
-  --accent: #fffc00;
-
-  --z-fish: 10;
-  --z-letter-o: 20;
-  --z-flower2: 40;
-  --z-flower1: 50;
-  --z-letter-n2: 55;
-  --z-cloud1: 60;
-  --z-letter-i: 70;
-  --z-moon: 80;
-  --z-letter-a: 85;
-  --z-pink-suit: 90;
-  --z-cloud2: 95;
-  --z-helmet: 97;
-  --z-letter-u: 100;
-  --z-letter-t: 110;
-  --z-letter-e: 120;
-  --z-letter-s: 130;
-  --z-paper-bird: 130;
-  --z-cloud2b: 140;
-  --z-subtitle: 150;
-}
-
-@keyframes background-change {
-  from { background-color: var(--light); }
-  20% { background-color: var(--light); }
-  60% { background-color: var(--dark); }
-}
-
-@keyframes image-rise {
-  from { transform: translateY(0); }
-  to { transform: translateY(-3em); }
-}
-
-@keyframes slide-from-left {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
-}
-@keyframes wriggle-from-left {
-  from { transform: translateX(-100%) translateY(-8%); }
-  20% { transform: translateX(-80%) translateY(8%); }
-  40% { transform: translateX(-60%) translateY(-8%); }
-  60% { transform: translateX(-40%) translateY(8%); }
-  80% { transform: translateX(-20%) translateY(-8%); }
-  to { transform: translateX(0) translateY(0); }
-}
-
-@keyframes slide-from-right {
-  from { transform: translateX(100%); }
-  to { transform: translateX(0); }
-}
-
-@keyframes image-jump {
-  from { transform: translateY(100%); filter: saturate(0); }
-  to { transform: translateY(5%); filter: saturate(1); }
-}
-
-@keyframes align-top {
-  to { top: 0; }
-}
-
-@keyframes floating {
-  from { transform: 0; }
-  to { transform: translateY(-.5em); }
-}
-
-@keyframes move-left {
-  to { transform: translateX(-10%); }
-}
-
-@keyframes move-right {
-  to { transform: translateX(10%); }
-}
-
 @layer base {
+  :root {
+    --light: #d1c8bc;
+    --dark: #0a0a2a;
+    --accent: #fffc00;
+  }
+
   body {
     font-family: Lato, Roboto, sans-serif;
     accent-color: var(--accent);
@@ -119,8 +48,80 @@
   }
 }
 
-
 @layer page {
+  :root {
+    --z-fish: 10;
+    --z-letter-o: 20;
+    --z-flower2: 40;
+    --z-flower1: 50;
+    --z-letter-n2: 55;
+    --z-cloud1: 60;
+    --z-letter-i: 70;
+    --z-moon: 80;
+    --z-letter-a: 85;
+    --z-pink-suit: 90;
+    --z-cloud2: 95;
+    --z-helmet: 97;
+    --z-letter-u: 100;
+    --z-letter-t: 110;
+    --z-letter-e: 120;
+    --z-letter-s: 130;
+    --z-paper-bird: 130;
+    --z-cloud2b: 140;
+    --z-subtitle: 150;
+  }
+
+  @keyframes background-change {
+    from { background-color: var(--light); }
+    20% { background-color: var(--light); }
+    60% { background-color: var(--dark); }
+  }
+
+  @keyframes image-rise {
+    from { transform: translateY(0); }
+    to { transform: translateY(-3em); }
+  }
+
+  @keyframes slide-from-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  @keyframes wriggle-from-left {
+    from { transform: translateX(-100%) translateY(-8%); }
+    20% { transform: translateX(-80%) translateY(8%); }
+    40% { transform: translateX(-60%) translateY(-8%); }
+    60% { transform: translateX(-40%) translateY(8%); }
+    80% { transform: translateX(-20%) translateY(-8%); }
+    to { transform: translateX(0) translateY(0); }
+  }
+
+  @keyframes slide-from-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+
+  @keyframes image-jump {
+    from { transform: translateY(100%); filter: saturate(0); }
+    to { transform: translateY(5%); filter: saturate(1); }
+  }
+
+  @keyframes align-top {
+    to { top: 0; }
+  }
+
+  @keyframes floating {
+    from { transform: 0; }
+    to { transform: translateY(-.5em); }
+  }
+
+  @keyframes move-left {
+    to { transform: translateX(-10%); }
+  }
+
+  @keyframes move-right {
+    to { transform: translateX(10%); }
+  }
+
   body {
     padding-top: 3rem;
     background: var(--dark);
