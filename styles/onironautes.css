@@ -9,14 +9,14 @@
     --accent: #fffc00;
   }
 
-  body {
-    font-family: Lato, Roboto, sans-serif;
-    accent-color: var(--accent);
-  }
-
   ::selection {
     background-color: var(--accent);
     color: var(--dark);
+  }
+
+  body {
+    font-family: Lato, Roboto, sans-serif;
+    accent-color: var(--accent);
   }
 
   a {
