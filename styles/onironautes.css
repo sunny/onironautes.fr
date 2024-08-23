@@ -501,6 +501,9 @@
   }
 
   .outro__astronaut {
+    position: relative;
+    z-index: 1; /* Above the moon */
+
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
     animation-range: entry 80%;
