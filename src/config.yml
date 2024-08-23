@@ -1,0 +1,80 @@
+events:
+  - at: 2024-09-04
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2024-09-19
+    start_at: "21:00"
+    end_at: "22:30"
+    type: improvibar_dreamform
+  - at: 2024-10-02
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2024-10-10
+    start_at: "21:00"
+    end_at: "22:30"
+    type: improvibar_dreamform
+  - at: 2024-11-06
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2024-11-14
+    start_at: "21:00"
+    end_at: "22:30"
+    type: improvibar_dreamform
+  - at: 2024-12-04
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-01-08
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-02-05
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-03-05
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-04-02
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-05-07
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-06-04
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+  - at: 2025-07-02
+    start_at: "21:00"
+    end_at: "22:30"
+    type: kibele_dreamform
+
+types:
+  kibele_dreamform:
+    name: Dreamform
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Kibélé
+    location_prefix: "au "
+    address: 12 Rue de l’Échiquier, 75010 Paris
+    location_url: https://kibele.fr/
+    map_url: https://www.google.com/maps/place/Kibele/@48.8713574,2.3495238,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66e13e2bcd3e5:0x3bcdc2f57a915973!8m2!3d48.8713539!4d2.3520987!16s%2Fg%2F1vf9bnxy?entry=ttu
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol
+
+  improvibar_dreamform:
+    name: Dreamform
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Improvibar
+    location_prefix: "à l’"
+    address: 3 Rue Geoffroy l’Angevin, 75004 Paris
+    location_url: http://improvibar.fr/
+    map_url: https://www.google.com/maps/place/Improvi%E2%80%99bar/@48.8605228,2.3518088,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66f89ba809b87:0xdc757c95f1907b14!8m2!3d48.8605193!4d2.3543837!16s%2Fg%2F11f9z4387f?entry=ttu
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol
