@@ -53,8 +53,8 @@ class Event
 
   attr_reader :at, :start_at, :end_at, :type
 
-  def iso_date = at.strftime("%Y-%M-%D")
-  def iso_datetime = at.strftime("%Y-%M-%DT%h:%m%:00Z")
+  def iso_date = at.strftime("%F")
+  def iso_datetime = "#{iso_date}T#{start_at}:00Z"
   def day = at.strftime("%-d")
   def year = at.strftime("%Y")
   def time = start_at.sub(":", "h").delete_suffix("00")
