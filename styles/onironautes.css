@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --light: #d1c8bc;
-    --dark: #0a0a2a;
+    --dark: #05051f;
     --accent: #fffc00;
   }
 
@@ -492,16 +492,32 @@
   }
 
   .outro {
+    position: relative;
+    overflow: hidden;
     margin-top: 100px;
     text-align: center;
     view-timeline-name: --outro;
     view-timeline-axis: block;
   }
 
-  .outro__img {
+  .outro__astronaut {
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
     animation-range: entry 80%;
+  }
+
+  .outro__moon {
+    position: absolute;
+    right: -20vw;
+    width: 60vw;
+    height: 60vw;
+
+    opacity: .5;
+    filter: blur(3px);
+
+    animation: auto ease-in-out image-jump both;
+    animation-timeline: --outro;
+    animation-range: entry 10%;
   }
 }
 
