@@ -511,12 +511,12 @@
 
   .outro__moon {
     position: absolute;
+    top: -20px;
     right: -20vw;
     width: 60vw;
     height: 60vw;
 
-    opacity: .5;
-    filter: blur(3px);
+    opacity: .3;
 
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
