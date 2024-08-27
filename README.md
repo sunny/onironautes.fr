@@ -1,6 +1,8 @@
 # [Onironautes.fr](https://onironautes.fr)
 
-## Local development (requires Ruby 3)
+## Local development
+
+Requires Ruby >= 3.
 
 Launch a server on http://localhost:8080 with:
 
