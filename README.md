@@ -1,20 +1,22 @@
 # [Onironautes.fr](https://onironautes.fr)
 
-## Local build
+## Local development (requires Ruby 3)
 
-```sh
-bin/build
-```
-
-## Local development
-
-Launch a server on http://localhost:8080 (requires Python 3) with:
+Launch a server on http://localhost:8080 with:
 
 ```sh
 bin/dev
 ```
 
+Call build every time you change the source files:
+
+```sh
+bin/build
+```
+
 ## Deploy
+
+Commit using git, then:
 
 ```sh
 bin/deploy
