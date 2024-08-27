@@ -23,3 +23,5 @@ Commit using git, then:
 ```sh
 bin/deploy
 ```
+
+<img src="https://onironautes.fr/images/dream/baloon-astronaut.png" alt="🧑‍🚀" width="316" height="368" />
