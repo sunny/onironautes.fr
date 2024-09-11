@@ -2,7 +2,7 @@ events:
   - at: 2024-09-06
     start_at: "21:30"
     end_at: "22:30"
-    type: kibele_dreamform
+    type: kibele_30
   - at: 2024-09-19
     start_at: "21:00"
     end_at: "22:30"
@@ -61,6 +61,17 @@ types:
     name: Dreamform
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Kibélé
+    location_prefix: "au "
+    address: 12 Rue de l’Échiquier, 75010 Paris
+    location_url: https://kibele.fr/
+    map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol
+
+  kibele_30:
+    name: "30"
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « 30 », où trente improvisations devront être jouées, pas une de plus, pas une de moins.
     location_name: Kibélé
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
