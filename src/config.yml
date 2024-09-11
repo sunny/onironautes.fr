@@ -96,7 +96,7 @@ types:
     name: Dreamform
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
-    location_name: Improvibar
+    location_name: Improvi’bar
     location_prefix: "à l’"
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris
     location_url: http://improvibar.fr/
