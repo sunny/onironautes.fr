@@ -15,6 +15,7 @@ class Event
         type: event.fetch("type"),
         start_at: event.fetch("start_at"),
         end_at: event.fetch("end_at"),
+        image: event["image"],
       )
     end
   end
@@ -44,14 +45,15 @@ class Event
     6 => "samedi",
   }
 
-  def initialize(at:, type:, start_at:, end_at:)
+  def initialize(at:, type:, start_at:, end_at:, image:)
     @at = at
     @start_at = start_at
     @end_at = end_at
     @type = type
+    @image = image
   end
 
-  attr_reader :at, :start_at, :end_at, :type
+  attr_reader :at, :start_at, :end_at, :type, :image
 
   def iso_date = at.strftime("%F")
   def iso_datetime = "#{iso_date}T#{start_at}:00Z"
