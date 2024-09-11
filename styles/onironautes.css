@@ -380,6 +380,11 @@
     max-width: 450px;
     font-size: 1.25rem;
   }
+
+  .pairs__text > p:first-child {
+    margin-top: 0;
+  }
+
   @media (width < 500px) {
     .pairs__text {
       order: 1;
@@ -473,6 +478,10 @@
   }
   .event:not(.event--past) .event__date {
     color: var(--accent);
+  }
+
+  .event__image {
+    margin-top: 1em;
   }
 
   .event__directions svg {
