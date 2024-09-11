@@ -2,6 +2,8 @@
 
 set -e
 
+echo "(Make sure you build and commit before deploying)"
+
 git push
 
 ssh sunfox 'cd /var/www/onironautes.fr/ && git pull'

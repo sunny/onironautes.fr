@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+nodemon -w src --ext erb,yml,rb -x bin/build

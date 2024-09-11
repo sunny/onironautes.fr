@@ -5,6 +5,8 @@ require "erb"
 require "pathname"
 require "yaml"
 
+puts "Building…"
+
 template = Pathname.new(__dir__).join("../src/index.html.erb")
 events = Event.all
 html = ERB.new(template.read).result(binding)

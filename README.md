@@ -16,6 +16,14 @@ Call build every time you change the source files:
 bin/build
 ```
 
+## Watch and rebuild
+
+Requires `overmind` and `npm install -g nodemon`:
+
+```sh
+bin/watch
+```
+
 ## Deploy
 
 Commit using git, then:
