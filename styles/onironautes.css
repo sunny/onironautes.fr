@@ -443,10 +443,15 @@
     font-size: 1.25rem;
   }
 
+  .large-video-container {
+    display: flex;
+  }
+
   .large-video {
     width: 100%;
+    margin: 2rem auto;
+    max-width: 750px;
     aspect-ratio: 1.8;
-    margin-bottom: 2rem;
   }
 
   .event__location {
