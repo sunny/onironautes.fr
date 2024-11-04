@@ -38,21 +38,42 @@ events:
     end_at: "22:30"
     type: kibele_dreamform
     image: events/square-2025-01-08.jpg
+    cancelled: true
+  - at: 2025-01-09
+    start_at: "19:30"
+    end_at: "20:30"
+    type: improvibar_dreamform
   - at: 2025-02-05
     start_at: "21:30"
     end_at: "22:30"
     type: kibele_dreamform
     image: events/square-2025-02-05.jpg
+  - at: 2025-02-27
+    start_at: "19:30"
+    end_at: "20:30"
+    type: improvibar_dreamform
   - at: 2025-03-05
     start_at: "21:30"
     end_at: "22:30"
     type: kibele_dreamform
     image: events/square-2025-03-05.jpg
+  - at: 2025-03-27
+    start_at: "19:30"
+    end_at: "20:30"
+    type: improvibar_dreamform
   - at: 2025-04-02
     start_at: "21:30"
     end_at: "22:30"
     type: kibele_dreamform
     image: events/square-2025-04-02.jpg
+  - at: 2025-04-12
+    start_at: "16:30"
+    end_at: "17:30"
+    type: improvibar_poulpes
+  - at: 2025-04-24
+    start_at: "19:30"
+    end_at: "20:30"
+    type: improvibar_dreamform
   - at: 2025-05-07
     start_at: "21:30"
     end_at: "22:30"
@@ -71,7 +92,7 @@ events:
 
 types:
   kibele_dreamform:
-    name: Dreamform
+    name: « Dreamform »
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
     location_name: Kibélé
@@ -82,7 +103,7 @@ types:
     entry: Entrée libre, consommation obligatoire, salle au sous-sol
 
   kibele_30:
-    name: "30"
+    name: "« 30 »"
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « 30 », où trente improvisations devront être jouées, pas une de plus, pas une de moins.
     location_name: Kibélé
@@ -93,9 +114,20 @@ types:
     entry: Entrée libre, consommation obligatoire, salle au sous-sol
 
   improvibar_dreamform:
-    name: Dreamform
+    name: « Dreamform »
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Improvi’bar
+    location_prefix: "à l’"
+    address: 3 Rue Geoffroy l’Angevin, 75004 Paris
+    location_url: http://improvibar.fr/
+    map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol
+
+  improvibar_poulpes:
+    name: Match avec les « Poulpes Fiction »
+    calendar_name: Match d’impro Poulpes Fiction <> Onironautes
+    description: Match d’improvisation théâtrale à la rencontre de l’équipe des Pouples Fiction qui nous vient de Liège?
     location_name: Improvi’bar
     location_prefix: "à l’"
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris

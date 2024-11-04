@@ -481,7 +481,7 @@
   .event--past a {
     color: currentColor;
   }
-  .event:not(.event--past) .event__date {
+  .event:not(.event--past):not(.event--cancelled) .event__date {
     color: var(--accent);
   }
 

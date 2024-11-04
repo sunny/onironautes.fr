@@ -1,4 +1,5 @@
 require "date"
+require_relative "./date_format"
 
 class Event
   def self.config
@@ -16,52 +17,30 @@ class Event
         start_at: event.fetch("start_at"),
         end_at: event.fetch("end_at"),
         image: event["image"],
+        cancelled: event["cancelled"],
       )
     end
   end
 
-  MONTH_NAMES = {
-    1 => "janvier",
-    2 => "février",
-    3 => "mars",
-    4 => "avril",
-    5 => "mai",
-    6 => "juin",
-    7 => "juillet",
-    8 => "août",
-    9 => "septembre",
-    10 => "octobre",
-    11 => "novembre",
-    12 => "décembre",
-  }
-
-  WEEKDAY_NAMES = {
-    0 => "dimanche",
-    1 => "lundi",
-    2 => "mardi",
-    3 => "mercredi",
-    4 => "jeudi",
-    5 => "vendredi",
-    6 => "samedi",
-  }
-
-  def initialize(at:, type:, start_at:, end_at:, image:)
+  def initialize(at:, type:, start_at:, end_at:, image:, cancelled:)
     @at = at
     @start_at = start_at
     @end_at = end_at
     @type = type
     @image = image
+    @cancelled = !!cancelled
   end
 
   attr_reader :at, :start_at, :end_at, :type, :image
 
-  def iso_date = at.strftime("%F")
+  def past? = at < Date.today
+  def iso_date = date_format.iso_date
   def iso_datetime = "#{iso_date}T#{start_at}:00Z"
-  def day = at.strftime("%-d")
-  def year = at.strftime("%Y")
+  def day = date_format.day
+  def year = date_format.year
   def time = start_at.sub(":", "h").delete_suffix("00")
-  def day_of_the_week_name = WEEKDAY_NAMES.fetch(at.wday)
-  def month_name = MONTH_NAMES.fetch(at.month)
+  def day_of_the_week_name = date_format.day_of_the_week_name
+  def month_name = date_format.month_name
 
   def location_url = type_config.fetch("location_url")
   def location_name = type_config.fetch("location_name")
@@ -72,8 +51,11 @@ class Event
   def calendar_name = type_config.fetch("calendar_name")
   def description = type_config.fetch("description")
   def entry = type_config.fetch("entry")
+  def cancelled? = @cancelled
 
   private
+
+  def date_format = @date_format ||= DateFormat.new(at)
 
   def type_config
     @type_config ||= self.class.config.fetch("types").fetch(type)
