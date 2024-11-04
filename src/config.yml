@@ -125,8 +125,8 @@ types:
     entry: Entrée libre, consommation obligatoire, salle au sous-sol
 
   improvibar_poulpes:
-    name: Match avec les « Poulpes Fiction »
-    calendar_name: Match d’impro Poulpes Fiction <> Onironautes
+    name: Match Poulpes Fiction et Onironautes
+    calendar_name: Match d’impro Poulpes Fiction et Onironautes
     description: Match d’improvisation théâtrale à la rencontre de l’équipe des Pouples Fiction qui nous vient de Liège?
     location_name: Improvi’bar
     location_prefix: "à l’"
