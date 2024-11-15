@@ -49,6 +49,13 @@ class Event
   def address = type_config.fetch("address")
   def map_url = type_config.fetch("map_url")
   def calendar_name = type_config.fetch("calendar_name")
+
+  def calendar_button_description
+    "#{description}[br][br]" \
+      "#{entry}[br][br]" \
+      "[url]https://onironautes.fr|onironautes.fr[/url]"
+  end
+
   def description = type_config.fetch("description")
   def entry = type_config.fetch("entry")
   def cancelled? = @cancelled
