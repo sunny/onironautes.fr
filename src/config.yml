@@ -43,6 +43,10 @@ events:
     start_at: "19:30"
     end_at: "20:30"
     type: improvibar_dreamform
+  - at: 2025-01-24
+    start_at: "20:00"
+    end_at: "21:00"
+    type: mediatheque_rosny
   - at: 2025-02-05
     start_at: "21:30"
     end_at: "22:30"
@@ -134,3 +138,14 @@ types:
     location_url: http://improvibar.fr/
     map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
     entry: Entrée libre, consommation obligatoire, salle au sous-sol
+
+  mediatheque_rosny:
+    name: Dreamform à la médiathèque de Rosny-sous-Bois
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Médiathèque Marguerite Yourcenar
+    location_prefix: "à la"
+    address: 1 ter rue des Sycomores, 93110 Rosny-sous-Bois
+    location_url: https://mediatheques.rosnysousbois.fr/
+    map_url: https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760
+    entry: Entrée libre
