@@ -201,7 +201,7 @@
               ("event--cancelled" if event.cancelled?),
             ].compact.join(" ")
           %>"
-          data-event
+          <%= "data-event" unless event.cancelled? %>
         >
           <summary>
             <time data-event-time datetime="<%= event.iso_datetime %>">
@@ -235,7 +235,6 @@
             <% end %>
 
             <div class="event__details">
-
               <% if event.cancelled? %>
                 <p>
                   <em>Spectacle reporté.</em>
@@ -261,8 +260,8 @@
                     height="20"
                     viewBox="0 -960 960 960"
                     fill="currentColor"
+                    aria-label="📍"
                   >
-                    <title>📍</title>
                     <path
                       d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
                     />
@@ -271,25 +270,25 @@
                 <p>
                   <em><%= event.entry %></em>
                 </p>
-              <% end %>
 
-              <add-to-calendar-button
-                name="<%= event.calendar_name %>"
-                description="<%= event.calendar_button_description %>"
-                startDate="<%= event.iso_date %>"
-                startTime="<%= event.start_at %>"
-                endTime="<%= event.end_at %>"
-                timeZone="Europe/Paris"
-                location="<%= event.location_name %>, <%= event.address %>"
-                options="'Google','Apple','Outlook.com','Yahoo','iCal'"
-                trigger="click"
-                styleLight="--btn-border: transparent; --btn-background: white"
-                size="4"
-                label="Ajouter à mon calendrier"
-                lightMode="bodyScheme"
-                language="fr"
-                inline
-              ></add-to-calendar-button>
+                <add-to-calendar-button
+                  name="<%= event.calendar_name %>"
+                  description="<%= event.calendar_button_description %>"
+                  startDate="<%= event.iso_date %>"
+                  startTime="<%= event.start_at %>"
+                  endTime="<%= event.end_at %>"
+                  timeZone="Europe/Paris"
+                  location="<%= event.location_name %>, <%= event.address %>"
+                  options="'Google','Apple','Outlook.com','Yahoo','iCal'"
+                  trigger="click"
+                  styleLight="--btn-border: transparent; --btn-background: white"
+                  size="4"
+                  label="Ajouter à mon calendrier"
+                  lightMode="bodyScheme"
+                  language="fr"
+                  inline
+                ></add-to-calendar-button>
+              <% end %>
             </div>
           </div>
         </details>

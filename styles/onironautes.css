@@ -484,6 +484,10 @@
     margin-left: 1em;
   }
 
+  .event__illustration img {
+    object-fit: contain;
+  }
+
   @media (width < 500px) {
     .event__illustration {
       margin: 1em auto;

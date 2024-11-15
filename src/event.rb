@@ -31,7 +31,7 @@ class Event
     @cancelled = !!cancelled
   end
 
-  attr_reader :at, :start_at, :end_at, :type, :image
+  attr_reader :at, :start_at, :end_at, :type
 
   def past? = at < Date.today
   def iso_date = date_format.iso_date
@@ -42,6 +42,7 @@ class Event
   def day_of_the_week_name = date_format.day_of_the_week_name
   def month_name = date_format.month_name
 
+  def image = @image || type_config["image"]
   def location_url = type_config.fetch("location_url")
   def location_name = type_config.fetch("location_name")
   def location_prefix = type_config.fetch("location_prefix")

@@ -4,6 +4,8 @@ function handleEvents() {
     if (nextFound) return;
 
     const timeElement = element.querySelector("[data-event-time]")
+    if (!timeElement) return;
+
     const time = Date.parse(timeElement.attributes["datetime"].value)
 
     // Strike old events

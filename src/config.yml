@@ -47,7 +47,6 @@ events:
     start_at: "20:00"
     end_at: "21:00"
     type: mediatheque_rosny
-    image: venues/rosny-sous-bois.png
   - at: 2025-02-05
     start_at: "21:30"
     end_at: "22:30"
@@ -106,6 +105,7 @@ types:
     location_url: https://kibele.fr/
     map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
     entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    image: venues/kibele.png
 
   kibele_30:
     name: "« 30 »"
@@ -117,6 +117,7 @@ types:
     location_url: https://kibele.fr/
     map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
     entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    image: venues/kibele.png
 
   improvibar_dreamform:
     name: « Dreamform »
@@ -128,6 +129,7 @@ types:
     location_url: http://improvibar.fr/
     map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
     entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    image: venues/improvibar.png
 
   improvibar_poulpes:
     name: Match Poulpes Fiction et Onironautes
@@ -139,6 +141,7 @@ types:
     location_url: http://improvibar.fr/
     map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
     entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    image: venues/improvibar.png
 
   mediatheque_rosny:
     name: « Dreamform »
@@ -150,3 +153,4 @@ types:
     location_url: https://mediatheques.rosnysousbois.fr/
     map_url: https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760
     entry: Entrée libre.
+    image: venues/rosny-sous-bois.png
