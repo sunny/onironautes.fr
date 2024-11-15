@@ -104,7 +104,7 @@ types:
     address: 12 Rue de l’Échiquier, 75010 Paris
     location_url: https://kibele.fr/
     map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
 
   kibele_30:
@@ -116,7 +116,7 @@ types:
     address: 12 Rue de l’Échiquier, 75010 Paris
     location_url: https://kibele.fr/
     map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
 
   improvibar_dreamform:
@@ -128,7 +128,7 @@ types:
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris
     location_url: http://improvibar.fr/
     map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/improvibar.png
 
   improvibar_poulpes:
@@ -140,7 +140,7 @@ types:
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris
     location_url: http://improvibar.fr/
     map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol.
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/improvibar.png
 
   mediatheque_rosny:
@@ -152,5 +152,5 @@ types:
     address: 1 ter rue des Sycomores, 93110 Rosny-sous-Bois
     location_url: https://mediatheques.rosnysousbois.fr/
     map_url: https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760
-    entry: Entrée libre.
+    entry: Entrée libre, 1h environ.
     image: venues/rosny-sous-bois.png
