@@ -13,6 +13,9 @@ events = Event.all
 template = Pathname.new(__dir__).join("../src/index.html.erb")
 html = ERB.new(template.read).result(binding)
 
+# Remove trailing whitespace
+html = html.gsub(/ +$/, "")
+
 File.write(Pathname.new(__dir__).join("../index.html"), html)
 
 puts "✅"

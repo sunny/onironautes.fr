@@ -1,3 +1,4 @@
+require "uri"
 require "date"
 require_relative "./date_format"
 
@@ -17,21 +18,23 @@ class Event
         start_at: event.fetch("start_at"),
         end_at: event.fetch("end_at"),
         image: event["image"],
+        url: event["url"],
         cancelled: event["cancelled"],
       )
     end
   end
 
-  def initialize(at:, type:, start_at:, end_at:, image:, cancelled:)
+  def initialize(at:, type:, start_at:, end_at:, image:, url:, cancelled:)
     @at = at
     @start_at = start_at
     @end_at = end_at
     @type = type
     @image = image
+    @url = url
     @cancelled = !!cancelled
   end
 
-  attr_reader :at, :start_at, :end_at, :type
+  attr_reader :at, :type, :start_at, :end_at, :url
 
   def past? = at < Date.today
   def iso_date = date_format.iso_date
@@ -50,6 +53,7 @@ class Event
   def address = type_config.fetch("address")
   def map_url = type_config.fetch("map_url")
   def calendar_name = type_config.fetch("calendar_name")
+  def url_domain = URI.parse(url).host.sub("www.", "")
 
   def calendar_button_description
     "#{description}[br][br]" \

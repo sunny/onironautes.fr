@@ -530,6 +530,9 @@
   .event > p {
     margin-left: 1em;
   }
+  .event__link {
+    font-size: 1rem;
+  }
 
   .event--past add-to-calendar-button {
     display: none;
