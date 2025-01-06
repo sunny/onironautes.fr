@@ -38,6 +38,7 @@ events:
     start_at: "19:30"
     end_at: "20:30"
     type: improvibar_dreamform
+    image: events/square-2025-01-09.jpg
   - at: 2025-01-24
     start_at: "20:00"
     end_at: "21:00"
