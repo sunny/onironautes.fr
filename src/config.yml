@@ -35,8 +35,8 @@ events:
     image: events/square-2024-12-04.jpg
     url: https://www.facebook.com/events/536386095587030/
   - at: 2025-01-09
-    start_at: "19:30"
-    end_at: "20:30"
+    start_at: "21:00"
+    end_at: "22:00"
     type: improvibar_dreamform
     image: events/square-2025-01-09.jpg
   - at: 2025-01-24
