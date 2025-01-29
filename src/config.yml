@@ -69,7 +69,7 @@ events:
   - at: 2025-04-19
     start_at: "20:00"
     end_at: "21:00"
-    type: kibele_dreamform
+    type: kibele_poulpes
   - at: 2025-04-24
     start_at: "19:30"
     end_at: "20:30"
@@ -93,6 +93,18 @@ types:
     name: "« 30 »"
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « 30 », où trente improvisations devront être jouées, pas une de plus, pas une de moins.
+    location_name: Kibélé
+    location_prefix: "au "
+    address: 12 Rue de l’Échiquier, 75010 Paris
+    location_url: https://kibele.fr/
+    map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
+    image: venues/kibele.png
+
+  kibele_poulpes:
+    name: Rencontre avec les Poulpes de Liège
+    calendar_name: Rencontre d’impro Poulpes et Onironautes
+    description: L’équipe des Pouples vient tout droit de Belgique rencontrer les Onironautes sur les terrain de jeu. Une rencontre d’improvisation franco-belge haute en couleur.
     location_name: Kibélé
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
