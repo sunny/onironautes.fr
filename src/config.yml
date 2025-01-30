@@ -102,9 +102,9 @@ types:
     image: venues/kibele.png
 
   kibele_poulpes:
-    name: Rencontre avec les Poulpes de Liège
+    name: Rencontre franco-belge avec l’équipe des Poulpes Fiction de Liège
     calendar_name: Rencontre d’impro Poulpes et Onironautes
-    description: L’équipe des Pouples vient tout droit de Belgique rencontrer les Onironautes sur les terrain de jeu. Une rencontre d’improvisation franco-belge haute en couleur.
+    description: L’équipe des Pouples Fiction vient tout droit de Liège en Belgique pour rencontrer les Onironautes.
     location_name: Kibélé
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
