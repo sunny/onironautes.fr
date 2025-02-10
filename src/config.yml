@@ -75,6 +75,10 @@ events:
     end_at: "20:30"
     type: improvibar_dreamform
     cancelled: true
+  - at: 2025-05-16
+    start_at: "19:30"
+    end_at: "20:30"
+    type: paris_anim_14
 
 types:
   kibele_dreamform:
@@ -85,7 +89,7 @@ types:
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
     location_url: https://kibele.fr/
-    map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
+    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
 
@@ -97,7 +101,7 @@ types:
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
     location_url: https://kibele.fr/
-    map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
+    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
 
@@ -109,7 +113,7 @@ types:
     location_prefix: "au "
     address: 12 Rue de l’Échiquier, 75010 Paris
     location_url: https://kibele.fr/
-    map_url: https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713
+    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
 
@@ -121,7 +125,7 @@ types:
     location_prefix: "à l’"
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris
     location_url: http://improvibar.fr/
-    map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
+    map_url: "https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/improvibar.png
 
@@ -133,7 +137,7 @@ types:
     location_prefix: "à l’"
     address: 3 Rue Geoffroy l’Angevin, 75004 Paris
     location_url: http://improvibar.fr/
-    map_url: https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606
+    map_url: "https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/improvibar.png
 
@@ -145,6 +149,18 @@ types:
     location_prefix: "à la "
     address: 1 ter rue des Sycomores, 93110 Rosny-sous-Bois
     location_url: https://mediatheques.rosnysousbois.fr/
-    map_url: https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760
+    map_url: "https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760"
     entry: Entrée libre, 1h environ.
     image: venues/rosny-sous-bois.png
+
+  paris_anim_14:
+    name: « Dreamform »
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
+    location_name: Centre Paris Anim’ Marc Sangnier
+    location_prefix: "au "
+    address: 20/24 avenue Marc Sangnier, 75014 Paris, France
+    location_url: https://parisanim14.fr/
+    map_url: "https://cartes.app/?allez=Centre%20d'Animation%20Marc-Sangnier%7Cn2478283323%7C2.3097%7C48.8254"
+    entry: Entrée libre, 1h environ.
+    image: venues/paris-anim-14.png
