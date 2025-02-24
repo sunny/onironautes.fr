@@ -193,128 +193,141 @@
     <div class="large-content">
       <h2 class="title">Prochaines dates</h2>
 
-      <% events.each do |event| %>
-        <details
+      <% events.group_by(&:year).each do |year, year_events| %>
+        <h3
           class="<%=
             [
-              "event",
-              ("event--cancelled" if event.cancelled?),
+              "year",
+              ("year--past" if year.to_i < Time.now.year ),
             ].compact.join(" ")
           %>"
-          <%= "data-event" unless event.cancelled? %>
         >
-          <summary>
-            <time data-event-time datetime="<%= event.iso_datetime %>">
-              <% if event.cancelled? %>
-                <del>
-              <% end %>
-              <strong class="event__date">
-                <%= event.day_of_the_week_name %>
-                <%= event.day %>
-                <%= event.month_name %>
-                <%= event.year %>
-              </strong>
-              —
-              <%= event.time %>
-              <% if event.cancelled? %>
-                </del>
-              <% end %>
-            </time>
-          </summary>
+          <%= year %>
+        </h3>
 
-          <div class="event__grid">
-            <% if event.image && !event.cancelled? %>
-              <div class="event__illustration">
-                <img
-                  src="/images/<%= event.image %>"
-                  width="200"
-                  height="200"
-                  alt=""
-                />
-              </div>
-            <% end %>
-
-            <div class="event__details">
-              <% if event.cancelled? %>
-                <p>
-                  <em>Date annulée.</em>
-                </p>
-              <% else %>
-                <p>
-                  <%= event.name %>
-                  <%= event.location_prefix %><a
-                    href="<%= event.location_url %>"
-                    rel="external noopener noreferrer"
-                  ><%= event.location_name %></a>.
-                </p>
-                <p>
-                  <%= event.address %>
-
-                  <a
-                    href="<%= event.map_url %>"
-                    rel="external noopener noreferrer"
-                    class="event__directions"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 -960 960 960"
-                    fill="currentColor"
-                    aria-label="📍"
-                  >
-                    <path
-                      d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
-                    />
-                  </svg></a>
-                </p>
-                <p>
-                  <em><%= event.entry %></em>
-                </p>
-
-                <add-to-calendar-button
-                  name="<%= event.calendar_name %>"
-                  description="<%= event.calendar_button_description %>"
-                  startDate="<%= event.iso_date %>"
-                  startTime="<%= event.start_at %>"
-                  endTime="<%= event.end_at %>"
-                  timeZone="Europe/Paris"
-                  location="<%= event.location_name %>, <%= event.address %>"
-                  options="'Google','Apple','Outlook.com','Yahoo','iCal'"
-                  trigger="click"
-                  styleLight="--btn-border: transparent; --btn-background: white"
-                  size="4"
-                  label="Ajouter à mon calendrier"
-                  lightMode="bodyScheme"
-                  language="fr"
-                  inline
-                ></add-to-calendar-button>
-
-                <% if event.url %>
-                  <p>
-                    <a
-                      href="<%= event.url%>"
-                      rel="external noopener noreferrer"
-                      class="event__link"
-                    >
-                      Voir sur <%= event.url_domain %>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path
-                          d="M19.98 2.99a1 1 0 0 0-.11.01H15a1 1 0 1 0 0 2h2.586l-9.293 9.293a1 1 0 1 0 1.414 1.414L19 6.414V9a1 1 0 1 0 2 0V4.127a1 1 0 0 0-1.02-1.137M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-6a1 1 0 1 0-2 0v6H5V5h6a1 1 0 1 0 0-2z"
-                        />
-                      </svg>
-                    </a>
-                  </p>
+        <% year_events.each do |event| %>
+          <details
+            class="<%=
+              [
+                "event",
+                ("event--cancelled" if event.cancelled?),
+              ].compact.join(" ")
+            %>"
+            <%= "data-event" unless event.cancelled? %>
+          >
+            <summary>
+              <time data-event-time datetime="<%= event.iso_datetime %>">
+                <% if event.cancelled? %>
+                  <del>
                 <% end %>
+
+                <strong class="event__date">
+                  <%= event.day_of_the_week_name %>
+                  <%= event.day %>
+                  <%= event.month_name %>
+                </strong>
+                <%= event.time %>
+
+                <% if event.cancelled? %>
+                  </del>
+                <% end %>
+              </time>
+            </summary>
+
+            <div class="event__grid">
+              <% if event.image && !event.cancelled? %>
+                <div class="event__illustration">
+                  <img
+                    src="/images/<%= event.image %>"
+                    width="200"
+                    height="200"
+                    alt=""
+                  />
+                </div>
               <% end %>
+
+              <div class="event__details">
+                <% if event.cancelled? %>
+                  <p>
+                    <em>Date annulée.</em>
+                  </p>
+                <% else %>
+                  <p>
+                    <%= event.name %>
+                    <%= event.location_prefix %><a
+                      href="<%= event.location_url %>"
+                      rel="external noopener noreferrer"
+                    ><%= event.location_name %></a>.
+                  </p>
+                  <p>
+                    <%= event.address %>
+
+                    <a
+                      href="<%= event.map_url %>"
+                      rel="external noopener noreferrer"
+                      class="event__directions"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 -960 960 960"
+                      fill="currentColor"
+                      aria-label="📍"
+                    >
+                      <path
+                        d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+                      />
+                    </svg></a>
+                  </p>
+                  <p>
+                    <em><%= event.entry %></em>
+                  </p>
+
+                  <add-to-calendar-button
+                    name="<%= event.calendar_name %>"
+                    description="<%= event.calendar_button_description %>"
+                    startDate="<%= event.iso_date %>"
+                    startTime="<%= event.start_at %>"
+                    endTime="<%= event.end_at %>"
+                    timeZone="Europe/Paris"
+                    location="<%= event.location_name %>, <%= event.address %>"
+                    options="'Google','Apple','Outlook.com','Yahoo','iCal'"
+                    trigger="click"
+                    styleLight="--btn-border: transparent; --btn-background: white"
+                    size="4"
+                    label="Ajouter à mon calendrier"
+                    lightMode="bodyScheme"
+                    language="fr"
+                    inline
+                  ></add-to-calendar-button>
+
+                  <% if event.url %>
+                    <p>
+                      <a
+                        href="<%= event.url%>"
+                        rel="external noopener noreferrer"
+                        class="event__link"
+                      >
+                        Voir sur <%= event.url_domain %>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M19.98 2.99a1 1 0 0 0-.11.01H15a1 1 0 1 0 0 2h2.586l-9.293 9.293a1 1 0 1 0 1.414 1.414L19 6.414V9a1 1 0 1 0 2 0V4.127a1 1 0 0 0-1.02-1.137M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-6a1 1 0 1 0-2 0v6H5V5h6a1 1 0 1 0 0-2z"
+                          />
+                        </svg>
+                      </a>
+                    </p>
+                  <% end %>
+                <% end %>
+              </div>
             </div>
-          </div>
-        </details>
+          </details>
+        <% end %>
       <% end %>
     </div>
 
