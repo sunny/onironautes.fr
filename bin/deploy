@@ -2,7 +2,7 @@
 
 set -e
 
-echo "(Make sure you build and commit before deploying)"
+echo "(Make sure you bump the CSS version, build and commit before deploying)"
 
 git push
 
