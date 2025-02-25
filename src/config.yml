@@ -55,6 +55,10 @@ events:
     start_at: "20:00"
     end_at: "21:00"
     type: kibele_dreamform
+  - at: 2025-04-03
+    start_at: "21:00"
+    end_at: "22:00"
+    type: improvibar_dreamform
   - at: 2025-04-12
     start_at: "16:30"
     end_at: "17:30"
