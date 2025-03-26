@@ -52,10 +52,9 @@ events:
     end_at: "20:30"
     type: improvibar_dreamform
   - at: 2025-03-27
-    start_at: "20:00"
-    end_at: "21:00"
-    type: kibele_dreamform
-    cancelled: true
+    start_at: "22:30"
+    end_at: "23:30"
+    type: improvibar_dreamform
   - at: 2025-04-03
     start_at: "21:00"
     end_at: "22:00"
