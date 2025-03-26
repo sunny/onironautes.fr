@@ -54,11 +54,13 @@ events:
   - at: 2025-03-27
     start_at: "22:30"
     end_at: "23:30"
+    url: https://improvizon.fr/events/6ba240cf-91cb-4069-84e3-5fa53a782cc6
     type: improvibar_dreamform
   - at: 2025-04-03
     start_at: "21:00"
     end_at: "22:00"
     type: improvibar_dreamform
+    url: https://improvizon.fr/events/88e28e13-23ac-474b-85f9-dc76b931e1b7
   - at: 2025-04-12
     start_at: "16:30"
     end_at: "17:30"
@@ -68,22 +70,27 @@ events:
     start_at: "20:00"
     end_at: "21:00"
     type: kibele_poulpes
+    url: https://improvizon.fr/events/0e606196-f0df-4953-8ed2-b701042fd2e8
   - at: 2025-04-24
     start_at: "21:00"
     end_at: "22:00"
     type: improvibar_dreamform
+    url: https://improvizon.fr/events/89b32f09-6fa7-40ae-a3b6-2f39f6b7162f
   - at: 2025-05-16
     start_at: "19:30"
     end_at: "20:30"
     type: paris_anim_14
+    url: https://improvizon.fr/events/7d5e1f8f-a581-41da-94d2-282e613062af
   - at: 2025-05-29
     start_at: "21:00"
     end_at: "22:00"
     type: improvibar_dreamform
+    url: https://improvizon.fr/events/16169be3-42f1-4b25-a4f7-4cfc1f1c0c0d
   - at: 2025-06-26
     start_at: "21:00"
     end_at: "22:00"
     type: improvibar_dreamform
+    url: https://improvizon.fr/events/d0f066a1-73f5-4427-99da-93fb148f62b6
 
 types:
   kibele_dreamform:
