@@ -81,6 +81,7 @@ events:
     end_at: "20:30"
     type: paris_anim_14
     url: https://improvizon.fr/events/7d5e1f8f-a581-41da-94d2-282e613062af
+    booking_url: https://my.weezevent.com/spectacle-des-onironautes-le-reve-improvise?_gl=1*95iclu*_gcl_au*NzEwMzgxMjI4LjE3NDA0ODkyMTkuMTgyODUxMzI1LjE3NDU5MzU0ODMuMTc0NTkzNTQ5NQ..*_ga*MTYwMTg4NjM0My4xNzMyNjQzNDE4*_ga_39H9VBFX7G*MTc0NTkzNTQ1Ni4xOS4xLjE3NDU5MzcwOTEuMzkuMC4xNTkwODcwNDU4
   - at: 2025-05-29
     start_at: "21:00"
     end_at: "22:00"

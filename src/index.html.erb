@@ -301,10 +301,32 @@
                     inline
                   ></add-to-calendar-button>
 
+                  <% if event.booking_url %>
+                    <p>
+                      <a
+                        href="<%= event.booking_url %>"
+                        rel="external noopener noreferrer"
+                        class="event__link"
+                      >
+                        Réserver sur <%= event.booking_url_domain %>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M19.98 2.99a1 1 0 0 0-.11.01H15a1 1 0 1 0 0 2h2.586l-9.293 9.293a1 1 0 1 0 1.414 1.414L19 6.414V9a1 1 0 1 0 2 0V4.127a1 1 0 0 0-1.02-1.137M5 3c-1.093 0-2 .907-2 2v14c0 1.093.907 2 2 2h14c1.093 0 2-.907 2-2v-6a1 1 0 1 0-2 0v6H5V5h6a1 1 0 1 0 0-2z"
+                          />
+                        </svg>
+                      </a>
+                    </p>
+                  <% end %>
                   <% if event.url %>
                     <p>
                       <a
-                        href="<%= event.url%>"
+                        href="<%= event.url %>"
                         rel="external noopener noreferrer"
                         class="event__link"
                       >

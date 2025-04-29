@@ -1,5 +1,6 @@
 require "uri"
 require "date"
+require "public_suffix"
 require_relative "./date_format"
 
 class Event
@@ -19,22 +20,33 @@ class Event
         end_at: event.fetch("end_at"),
         image: event["image"],
         url: event["url"],
+        booking_url: event["booking_url"],
         cancelled: event["cancelled"],
       )
     end
   end
 
-  def initialize(at:, type:, start_at:, end_at:, image:, url:, cancelled:)
+  def initialize(
+    at:,
+    type:,
+    start_at:,
+    end_at:,
+    image:,
+    url:,
+    booking_url:,
+    cancelled:
+  )
     @at = at
     @start_at = start_at
     @end_at = end_at
     @type = type
     @image = image
     @url = url
+    @booking_url = booking_url
     @cancelled = !!cancelled
   end
 
-  attr_reader :at, :type, :start_at, :end_at, :url
+  attr_reader :at, :type, :start_at, :end_at, :url, :booking_url
 
   def past? = at < Date.today
   def iso_date = date_format.iso_date
@@ -53,7 +65,8 @@ class Event
   def address = type_config.fetch("address")
   def map_url = type_config.fetch("map_url")
   def calendar_name = type_config.fetch("calendar_name")
-  def url_domain = URI.parse(url).host.sub("www.", "")
+  def url_domain = domain(url)
+  def booking_url_domain = domain(booking_url)
 
   def calendar_button_description
     "#{description}[br][br]" \
@@ -72,4 +85,6 @@ class Event
   def type_config
     @type_config ||= self.class.config.fetch("types").fetch(type)
   end
+
+  def domain(url) = PublicSuffix.parse(URI.parse(url).host).domain
 end
