@@ -1,97 +1,12 @@
 events:
-  - at: 2024-09-06
-    start_at: "21:30"
-    end_at: "22:30"
-    type: kibele_30
-  - at: 2024-09-19
-    start_at: "21:00"
-    end_at: "22:30"
-    type: improvibar_dreamform
-    image: events/square-2024-09-19.jpg
-  - at: 2024-10-02
-    start_at: "21:30"
-    end_at: "22:30"
-    type: kibele_dreamform
-    image: events/square-2024-10-02.jpg
-  - at: 2024-10-10
-    start_at: "21:00"
-    end_at: "22:30"
-    type: improvibar_dreamform
-    image: events/square-2024-10-10.jpg
-  - at: 2024-11-06
-    start_at: "21:30"
-    end_at: "22:30"
-    type: kibele_dreamform
-    image: events/square-2024-11-06.jpg
-  - at: 2024-11-14
-    start_at: "21:00"
-    end_at: "22:30"
-    type: improvibar_dreamform
-    image: events/square-2024-11-14.jpg
-  - at: 2024-12-04
-    start_at: "21:30"
-    end_at: "22:30"
-    type: kibele_dreamform
-    image: events/square-2024-12-04.jpg
-    url: https://www.facebook.com/events/536386095587030/
-  - at: 2025-01-09
-    start_at: "21:00"
-    end_at: "22:00"
-    type: improvibar_dreamform
-    image: events/square-2025-01-09.jpg
-  - at: 2025-01-24
-    start_at: "20:00"
-    end_at: "21:00"
-    type: mediatheque_rosny
-  - at: 2025-02-21
-    start_at: "20:00"
-    end_at: "21:00"
-    type: kibele_dreamform
-  - at: 2025-02-27
+  - at: 2025-10-18
     start_at: "19:30"
     end_at: "20:30"
-    type: improvibar_dreamform
-  - at: 2025-03-27
-    start_at: "22:30"
-    end_at: "23:30"
-    url: https://improvizon.fr/events/6ba240cf-91cb-4069-84e3-5fa53a782cc6
-    type: improvibar_dreamform
-  - at: 2025-04-03
-    start_at: "21:00"
-    end_at: "22:00"
-    type: improvibar_dreamform
-    url: https://improvizon.fr/events/88e28e13-23ac-474b-85f9-dc76b931e1b7
-  - at: 2025-04-12
-    start_at: "16:30"
-    end_at: "17:30"
-    type: improvibar_poulpes
-    cancelled: true
-  - at: 2025-04-19
-    start_at: "20:00"
-    end_at: "21:00"
-    type: kibele_poulpes
-    url: https://improvizon.fr/events/0e606196-f0df-4953-8ed2-b701042fd2e8
-  - at: 2025-04-24
-    start_at: "21:00"
-    end_at: "22:00"
-    type: improvibar_dreamform
-    url: https://improvizon.fr/events/89b32f09-6fa7-40ae-a3b6-2f39f6b7162f
-  - at: 2025-05-16
+    type: kibele_dreamform
+  - at: 2025-11-21
     start_at: "19:30"
     end_at: "20:30"
-    type: paris_anim_14
-    url: https://improvizon.fr/events/7d5e1f8f-a581-41da-94d2-282e613062af
-    booking_url: https://my.weezevent.com/spectacle-des-onironautes-le-reve-improvise?_gl=1*95iclu*_gcl_au*NzEwMzgxMjI4LjE3NDA0ODkyMTkuMTgyODUxMzI1LjE3NDU5MzU0ODMuMTc0NTkzNTQ5NQ..*_ga*MTYwMTg4NjM0My4xNzMyNjQzNDE4*_ga_39H9VBFX7G*MTc0NTkzNTQ1Ni4xOS4xLjE3NDU5MzcwOTEuMzkuMC4xNTkwODcwNDU4
-  - at: 2025-05-29
-    start_at: "21:00"
-    end_at: "22:00"
-    type: improvibar_dreamform
-    url: https://improvizon.fr/events/16169be3-42f1-4b25-a4f7-4cfc1f1c0c0d
-  - at: 2025-06-26
-    start_at: "21:00"
-    end_at: "22:00"
-    type: improvibar_dreamform
-    url: https://improvizon.fr/events/d0f066a1-73f5-4427-99da-93fb148f62b6
+    type: kibele_dreamform
 
 types:
   kibele_dreamform:
@@ -129,42 +44,6 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image: venues/kibele.png
-
-  improvibar_dreamform:
-    name: « Dreamform »
-    calendar_name: Spectacle d’impro des Onironautes
-    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
-    location_name: Improvi’bar
-    location_prefix: "à l’"
-    address: 3 Rue Geoffroy l’Angevin, 75004 Paris
-    location_url: http://improvibar.fr/
-    map_url: "https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606"
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
-    image: venues/improvibar.png
-
-  improvibar_poulpes:
-    name: Match Poulpes Fiction et Onironautes
-    calendar_name: Match d’impro Poulpes Fiction et Onironautes
-    description: Match d’improvisation théâtrale à la rencontre de l’équipe des Pouples Fiction qui nous vient de Liège?
-    location_name: Improvi’bar
-    location_prefix: "à l’"
-    address: 3 Rue Geoffroy l’Angevin, 75004 Paris
-    location_url: http://improvibar.fr/
-    map_url: "https://cartes.app/?allez=Improvi'bar%7Cn5871572630%7C2.3544%7C48.8606"
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
-    image: venues/improvibar.png
-
-  mediatheque_rosny:
-    name: « Dreamform »
-    calendar_name: Spectacle d’impro des Onironautes
-    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
-    location_name: Médiathèque Marguerite Yourcenar
-    location_prefix: "à la "
-    address: 1 ter rue des Sycomores, 93110 Rosny-sous-Bois
-    location_url: https://mediatheques.rosnysousbois.fr/
-    map_url: "https://cartes.app/?allez=Médiathèque+Marguerite+Yourcenar|n6958675640|2.4695|48.8760"
-    entry: Entrée libre, 1h environ.
-    image: venues/rosny-sous-bois.png
 
   paris_anim_14:
     name: « Dreamform »
