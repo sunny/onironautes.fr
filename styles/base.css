@@ -1,0 +1,47 @@
+:root {
+  --light: #d1c8bc;
+  --dark: #05051f;
+  --accent: #fffc00;
+  --tint: #8b88f9;
+}
+
+::selection {
+  background-color: var(--tint);
+  color: var(--dark);
+}
+
+body {
+  font-family: Lato, Roboto, sans-serif;
+  accent-color: var(--tint);
+}
+
+a {
+  color: var(--tint);
+  text-underline-offset: .25em;
+  text-decoration-thickness: .1em;
+
+  &:hover {
+    opacity: .8;
+  }
+}
+
+p {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+i, em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+summary {
+  cursor: pointer;
+}
+
+svg {
+  vertical-align: middle;
+}

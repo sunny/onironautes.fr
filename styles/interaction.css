@@ -1,0 +1,13 @@
+/* Hide all other content when a video is playing */
+body > :not(:has(video)) {
+  transition: opacity .5s, filter .5s;
+}
+
+body.is-video-playing {
+  background: black;
+
+  & > :not(:has(video)) {
+    opacity: .5;
+    filter: blur(2px) grayscale(1) saturate(0);
+  }
+}

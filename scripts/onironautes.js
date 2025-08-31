@@ -1,7 +1,6 @@
 function handleEvents() {
   let nextFound = false;
   document.querySelectorAll("[data-event]").forEach(element => {
-    if (nextFound) return;
 
     const timeElement = element.querySelector("[data-event-time]")
     if (!timeElement) return;
@@ -14,9 +13,13 @@ function handleEvents() {
       return
     }
 
-    // Open next event
-    element.classList.add("event--next")
+    // Open next events
     element.open = true;
+
+    // Mark the first
+    if (nextFound) return;
+
+    element.classList.add("event--next")
     nextFound = true;
   })
 }
