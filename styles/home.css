@@ -122,21 +122,43 @@ body {
 
 .pairs__img--flower1 {
   margin-right: -20%;
+  animation-name: slide-from-left;
+}
+.pairs__img--cloud2 {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  margin-right: -20%;
   animation-name: slide-from-right;
 }
-.pairs__img--fish {
-  margin-left: -20%;
-  animation-name: wriggle-from-left;
-}
+
 .pairs__img--flower2 {
   width: 175px;
   margin-right: -20%;
   animation-name: slide-from-right;
 }
+.pairs__img--fish {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 200px;
+  animation-name: wriggle-from-left;
+}
+
 .pairs__img--cloud1 {
   margin-left: -20%;
+  padding-bottom: 40px;
   animation-name: slide-from-left;
 }
+.pairs__img--baloon {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  width: 100px;
+
+  animation-name: slide-from-right;
+}
+
 
 @media (width < 500px) {
   .pairs__img {
