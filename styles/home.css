@@ -1,7 +1,7 @@
 @keyframes background-change {
   from { background-color: var(--light); }
   20% { background-color: var(--light); }
-  60% { background-color: var(--dark); }
+  50% { background-color: var(--dark); }
 }
 
 @keyframes slide-from-left {
@@ -160,7 +160,6 @@ body {
 
 .large-video-container {
   display: flex;
-  background: black;
 }
 
 .large-video {
