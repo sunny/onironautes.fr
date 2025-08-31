@@ -13,12 +13,11 @@
     />
 
     <style>
-      @layer reset, base, home, dream, interaction;
-      @import "styles/reset.css" layer(reset);
-      @import "styles/base.css?v=2" layer(base);
-      @import "styles/home.css" layer(home);
-      @import "styles/dream.css?v=2" layer(dream);
-      @import "styles/interaction.css" layer(interaction);
+      <% layers = %w[reset base home dream interaction] %>
+      @layer <%= layers.join(", ") %>;
+      <% layers.each do |layer| %>
+        @import "styles/<%= layer %>.css?v=<%= File.mtime("styles/#{layer}.css").to_i %>" layer(<%= layer %>);
+      <% end %>
     </style>
 
     <link
