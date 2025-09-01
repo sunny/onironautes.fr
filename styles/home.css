@@ -187,8 +187,12 @@ body {
 .large-video {
   width: 100%;
   margin: 2rem auto;
-  max-width: 750px;
+  max-width: 800px;
   aspect-ratio: 1.8;
+
+  @media (width > 800px) {
+    border-radius: .5rem;
+  }
 }
 
 .year {
