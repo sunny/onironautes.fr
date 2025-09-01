@@ -196,7 +196,6 @@
   right: calc(50% - 3em);
   width: 5.5em;
   z-index: var(--z-cloud2);
-  animation: 13s floating infinite ease-in-out alternate;
 }
 
 .dream__img--cloud2b {

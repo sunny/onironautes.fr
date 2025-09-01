@@ -73,7 +73,7 @@ body {
 @media (width < 500px) {
   .pairs__illustration {
     flex: 1;
-    max-width: 75vw;
+    max-width: 75lvw;
     padding: 0;
     text-align: center;
   }
@@ -337,9 +337,9 @@ body {
 
   .outro__moon {
     position: absolute;
-    right: -20vw;
-    width: 60vw;
-    height: 60vw;
+    right: -20lvw;
+    width: 60lvw;
+    height: 60lvw;
 
     opacity: .3;
 
