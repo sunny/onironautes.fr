@@ -321,10 +321,16 @@ body {
 .outro {
   position: relative;
   overflow: hidden;
-  margin-top: 100px;
+  padding-top: 150px;
   text-align: center;
   view-timeline-name: --outro;
   view-timeline-axis: block;
+
+  background: linear-gradient(
+    transparent,
+    var(--dark),
+    color-mix(in oklab, var(--dark) 75%, var(--light))
+  );
 
   .outro__astronaut {
     position: relative;
@@ -332,7 +338,7 @@ body {
 
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
-    animation-range: entry 80%;
+    animation-range: entry 90%;
   }
 
   .outro__moon {
@@ -341,7 +347,7 @@ body {
     width: 60lvw;
     height: 60lvw;
 
-    opacity: .3;
+    opacity: .4;
 
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
