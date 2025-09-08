@@ -1,0 +1,30 @@
+@keyframes blink {
+  0% { opacity: 0; }
+  40% { opacity: .5; }
+  50% { opacity: .5; }
+  60% { opacity: .5; }
+  100% { opacity: 0; }
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -1;
+}
+
+.stars__star {
+  opacity: 0;
+  fill: var(--light);
+  animation: blink 5s infinite;
+}
+
+.stars-star--blink-2 {
+  animation-delay: 2s;
+}
+
+.stars-star--blink-3 {
+  animation-delay: 3s;
+}
