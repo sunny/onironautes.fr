@@ -328,7 +328,7 @@ body {
 
   background: linear-gradient(
     transparent,
-    var(--dark),
+    var(--dark) 20%,
     color-mix(in oklab, var(--dark) 75%, var(--light))
   );
 
