@@ -232,6 +232,11 @@ body {
     }
   }
 
+  add-to-calendar-button {
+    display: inline-block;
+    margin-top: .5em;
+  }
+
   & > summary {
     text-transform: uppercase;
 
@@ -329,7 +334,7 @@ body {
   background: linear-gradient(
     transparent,
     var(--dark) 20%,
-    color-mix(in oklab, var(--dark) 75%, var(--light))
+    color-mix(in oklab, var(--dark) 80%, var(--light))
   );
 
   .outro__astronaut {
@@ -347,7 +352,7 @@ body {
     width: 60lvw;
     height: 60lvw;
 
-    opacity: .4;
+    opacity: .2;
 
     animation: auto ease-in-out image-jump both;
     animation-timeline: --outro;
