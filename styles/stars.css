@@ -18,13 +18,13 @@
 .stars__star {
   opacity: 0;
   fill: var(--light);
-  animation: blink 5s infinite;
+  animation: blink 3.5s infinite;
 }
 
 .stars-star--blink-2 {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 .stars-star--blink-3 {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
