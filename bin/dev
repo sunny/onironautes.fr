@@ -1,3 +1,23 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
-ruby -run -ehttpd . -p8000
+set -e
+
+if [ -e ".overmind.sock" ]; then
+  process=`pgrep overmind || :`
+
+  if [[ $process != "" ]]; then
+    echo "${red}Error: .overmind.sock already exists.${default}" 2>&1
+    echo "Perhaps it is still running?" 2>&1
+    echo -n "If not, would you like me to delete it for you and try again?" 2>&1
+    echo -n " [y/N] " 2>&1
+    read -r answer
+    if [ "$answer" != "y" ]; then
+      echo "Aborting" 2>&1
+      exit 1
+    fi
+  fi
+
+  rm -f .overmind.sock
+fi
+
+overmind start

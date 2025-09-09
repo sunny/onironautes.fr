@@ -1,2 +1,2 @@
-web: bin/dev
+web: bin/server
 watch: bin/watch

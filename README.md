@@ -2,29 +2,21 @@
 
 ## Local development
 
-Requires Ruby >= 3.
+Requires Ruby >= 3, `overmind` and `npm install -g nodemon`.
 
-Launch a server on http://localhost:8080 with:
+Launch a server on http://localhost:8080 and rebuild with:
 
 ```sh
 bin/dev
 ```
 
-Call build every time you change the source files:
+## Deploy
+
+Make sure you have the latest build:
 
 ```sh
 bin/build
 ```
-
-## Watch and rebuild
-
-Requires `overmind` and `npm install -g nodemon`:
-
-```sh
-bin/watch
-```
-
-## Deploy
 
 Commit using git, then:
 
