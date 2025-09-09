@@ -1,8 +1,8 @@
 @keyframes blink {
   0% { opacity: 0; }
-  40% { opacity: .5; }
+  30% { opacity: .5; }
   50% { opacity: .5; }
-  60% { opacity: .5; }
+  70% { opacity: .5; }
   100% { opacity: 0; }
 }
 
@@ -21,10 +21,10 @@
   animation: blink 3.5s infinite;
 }
 
-.stars-star--blink-2 {
+.stars__star--blink-2 {
   animation-delay: 1s;
 }
 
-.stars-star--blink-3 {
+.stars__star--blink-3 {
   animation-delay: 2s;
 }
