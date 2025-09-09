@@ -15,6 +15,19 @@ body {
   accent-color: var(--tint);
 }
 
+p {
+  margin: .5em 0;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4 {
+  text-shadow: rgba(0, 0, 0, .3) .01em .01em .1em;
+}
+
+h4 {
+  margin: 1em 0;
+}
+
 a {
   color: var(--tint);
   text-underline-offset: .25em;
@@ -23,11 +36,6 @@ a {
   &:hover {
     opacity: .8;
   }
-}
-
-p {
-  margin: .5em 0;
-  line-height: 1.2;
 }
 
 i, em {
@@ -44,8 +52,4 @@ summary {
 
 svg {
   vertical-align: middle;
-}
-
-h4 {
-  margin: 1em 0;
 }
