@@ -7,14 +7,12 @@ function handleEvents() {
 
     const time = Date.parse(timeElement.attributes["datetime"].value)
 
-    // Strike old events
+    // Strike and close old events
     if (time < Date.now() + 3_600) {
       element.classList.add("event--past")
+      element.open = false
       return
     }
-
-    // Open next events
-    element.open = true;
 
     // Mark the first
     if (nextFound) return;
