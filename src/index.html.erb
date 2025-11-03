@@ -250,7 +250,7 @@
               ].compact.join(" ")
             %>"
             <%= "data-event" unless event.cancelled? %>
-            open
+            <%= "open" unless event.past? %>
           >
             <summary>
               <time data-event-time datetime="<%= event.iso_datetime %>">

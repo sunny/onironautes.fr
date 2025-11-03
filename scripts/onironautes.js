@@ -14,11 +14,11 @@ function handleEvents() {
       return
     }
 
-    // Mark the first
-    if (nextFound) return;
-
-    element.classList.add("event--next")
-    nextFound = true;
+    // Mark the first event
+    if (!nextFound) {
+      element.classList.add("event--next")
+      nextFound = true;
+    }
   })
 }
 
