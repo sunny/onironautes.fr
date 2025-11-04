@@ -94,10 +94,6 @@ body {
   padding: 1em;
   max-width: 450px;
   font-size: 1.25rem;
-  text-shadow: -1px -1px 0 var(--dark),
-               1px 1px 0 var(--dark),
-               1px -1px 0 var(--dark),
-               1px -1px 0 var(--dark)
 }
 
 .pairs__text > p:first-child {
@@ -197,6 +193,15 @@ body {
   @media (width > 800px) {
     border-radius: .5rem;
   }
+}
+
+.year,
+.event,
+.pairs__text {
+  text-shadow: -1px -1px 0 var(--dark),
+               1px 1px 0 var(--dark),
+               1px -1px 0 var(--dark),
+               1px -1px 0 var(--dark)
 }
 
 .year {
