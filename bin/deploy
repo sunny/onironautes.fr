@@ -2,7 +2,10 @@
 
 set -e
 
-echo "(Make sure you build and commit before deploying)"
+color_off='\033[0m'
+cyan='\033[0;36m'
+
+echo "${cyan}Make sure you build and commit before deploying${color_off}"
 
 git push
 
