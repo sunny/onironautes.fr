@@ -3,35 +3,43 @@ events:
     start_at: "19:30"
     end_at: "20:30"
     type: kibele_30
+    base_image_path: images/base/square-astronaut.jpg
   - at: 2025-11-21
     start_at: "19:30"
     end_at: "20:30"
     type: kibele_dreamform
+    base_image_path: images/base/square-baloon.jpg
   - at: 2025-12-14
     start_at: "18:30"
     end_at: "19:30"
     type: kibele_30
+    base_image_path: images/base/square-parrot.jpg
     cancelled: true
   - at: 2025-12-14
     start_at: "16:00"
     end_at: "17:00"
     type: kibele_30
+    base_image_path: images/base/square-fish.jpg
   - at: 2025-12-20
     start_at: "18:30"
     end_at: "19:30"
     type: kibele_dreamform
+    base_image_path: images/base/square-bird.jpg
   - at: 2026-01-17
     start_at: "21:00"
     end_at: "22:00"
     type: kibele_dreamform
+    base_image_path: images/base/square-astronaut.jpg
   - at: 2026-02-20
     start_at: "19:30"
     end_at: "20:30"
     type: kibele_dreamform
+    base_image_path: images/base/square-baloon.jpg
   - at: 2026-03-20
     start_at: "21:00"
     end_at: "22:00"
     type: kibele_dreamform
+    base_image_path: images/base/square-parrot.jpg
 
 types:
   kibele_dreamform:
@@ -83,5 +91,5 @@ types:
     location_url: https://parisanim14.fr/
     map_url: "https://cartes.app/?allez=Centre%20d'Animation%20Marc-Sangnier%7Cn2478283323%7C2.3097%7C48.8254"
     entry: Entrée libre, 1h environ.
-    image_title: Paris Anim
+    image_title: PARIS ANIM
     image_path: venues/paris-anim-14.png

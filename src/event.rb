@@ -22,6 +22,7 @@ class Event
         start_at: event.fetch("start_at"),
         end_at: event.fetch("end_at"),
         image_path: event["image_path"],
+        base_image_path: event["base_image_path"],
         image_title: event["image_title"],
         url: event["url"],
         booking_url: event["booking_url"],
@@ -36,6 +37,7 @@ class Event
     start_at:,
     end_at:,
     image_path:,
+    base_image_path:,
     image_title:,
     url:,
     booking_url:,
@@ -46,6 +48,7 @@ class Event
     @end_at = end_at
     @type = type
     @image_path = image_path
+    @base_image_path = base_image_path
     @image_title = image_title
     @url = url
     @booking_url = booking_url
@@ -66,6 +69,7 @@ class Event
   def month_name = date_format.month_name
 
   def image_path = @image_path || type_config["image_path"]
+  def base_image_path = @base_image_path || type_config["base_image_path"]
   def image_title = @image_title || type_config["image_title"]
   def location_url = type_config.fetch("location_url")
   def location_name = type_config.fetch("location_name")

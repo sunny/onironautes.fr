@@ -17,10 +17,18 @@ class Image
     generated_large_path if File.exist?(generated_large_path)
   end
 
-  def generate!(base_path:)
+  def generate!
     FileUtils.rm_rf(generated_path)
+    generate
 
-    cmd "magick #{base_path} " \
+    FileUtils.rm_rf(generated_large_path)
+    generate_large
+  end
+
+  def generate
+    return if File.exist?(generated_path)
+
+    cmd "magick #{event.base_image_path} " \
         "-resize 1000x1000 " \
         "-font Avenir-Black " \
         "-pointsize 100 " \
@@ -39,8 +47,10 @@ class Image
         "-fill \"#fffc00\" " \
         "-draw \"text 250,833 \'#{formatted_date}\'\" " \
         "#{generated_path}"
+  end
 
-    FileUtils.rm_rf(generated_large_path)
+  def generate_large
+    return if File.exist?(generated_large_path)
 
     background = `magick #{generated_path} -format "%[pixel:p{0,0}]" info:-`
 

@@ -5,6 +5,8 @@ require "erb"
 
 puts "Building…"
 
+Event.all.each { _1.image.generate }
+
 # Variables used in the view
 events = Event.all
 

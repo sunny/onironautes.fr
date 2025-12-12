@@ -2,14 +2,4 @@
 
 require File.join(__dir__, "../src/event")
 
-puts "Rendering images…"
-
-bases = Dir.glob(File.join(__dir__, "../images/base/square-*.jpg"))
-
-events = Event.all.each do |event|
-  event.image.generate!(base_path: File.realpath(bases.first))
-  puts event.image.generated_path
-  bases.rotate!
-end
-
-puts "✅"
+Event.all.each { _1.image.generate! }
