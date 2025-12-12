@@ -2,8 +2,6 @@
 
 require File.join(__dir__, "../src/event")
 require "erb"
-require "pathname"
-require "yaml"
 
 puts "Building…"
 

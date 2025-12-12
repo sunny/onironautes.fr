@@ -1,7 +1,10 @@
 require "uri"
 require "date"
+require "yaml"
+require "pathname"
 require "public_suffix"
 require_relative "./date_format"
+require_relative "./image"
 
 class Event
   def self.config
@@ -18,7 +21,8 @@ class Event
         type: event.fetch("type"),
         start_at: event.fetch("start_at"),
         end_at: event.fetch("end_at"),
-        image: event["image"],
+        image_path: event["image_path"],
+        image_title: event["image_title"],
         url: event["url"],
         booking_url: event["booking_url"],
         cancelled: event["cancelled"],
@@ -31,7 +35,8 @@ class Event
     type:,
     start_at:,
     end_at:,
-    image:,
+    image_path:,
+    image_title:,
     url:,
     booking_url:,
     cancelled:
@@ -40,13 +45,16 @@ class Event
     @start_at = start_at
     @end_at = end_at
     @type = type
-    @image = image
+    @image_path = image_path
+    @image_title = image_title
     @url = url
     @booking_url = booking_url
     @cancelled = !!cancelled
   end
 
   attr_reader :at, :type, :start_at, :end_at, :url, :booking_url
+
+  def image = Image.new(event: self)
 
   def past? = at < Date.today
   def iso_date = date_format.iso_date
@@ -57,7 +65,8 @@ class Event
   def day_of_the_week_name = date_format.day_of_the_week_name
   def month_name = date_format.month_name
 
-  def image = @image || type_config["image"]
+  def image_path = @image_path || type_config["image_path"]
+  def image_title = @image_title || type_config["image_title"]
   def location_url = type_config.fetch("location_url")
   def location_name = type_config.fetch("location_name")
   def location_prefix = type_config.fetch("location_prefix")
