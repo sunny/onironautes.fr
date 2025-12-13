@@ -25,6 +25,7 @@ events:
     end_at: "19:30"
     type: kibele_dreamform
     base_image_path: images/base/square-bird.jpg
+    cancelled: true
   - at: 2026-01-17
     start_at: "21:00"
     end_at: "22:00"
