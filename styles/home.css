@@ -195,15 +195,6 @@ body {
   }
 }
 
-.year,
-.event,
-.pairs__text {
-  text-shadow: -1px -1px 0 var(--dark),
-               1px 1px 0 var(--dark),
-               1px -1px 0 var(--dark),
-               1px -1px 0 var(--dark)
-}
-
 .year {
   margin: 1em 0 .5em 0;
   text-transform: uppercase;
