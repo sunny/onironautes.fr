@@ -1,31 +1,4 @@
 events:
-  - at: 2025-10-18
-    start_at: "19:30"
-    end_at: "20:30"
-    type: kibele_30
-    base_image_path: images/base/square-astronaut.jpg
-  - at: 2025-11-21
-    start_at: "19:30"
-    end_at: "20:30"
-    type: kibele_dreamform
-    base_image_path: images/base/square-baloon.jpg
-  - at: 2025-12-14
-    start_at: "18:30"
-    end_at: "19:30"
-    type: kibele_30
-    base_image_path: images/base/square-parrot.jpg
-    cancelled: true
-  - at: 2025-12-14
-    start_at: "16:00"
-    end_at: "17:00"
-    type: kibele_30
-    base_image_path: images/base/square-fish.jpg
-  - at: 2025-12-20
-    start_at: "18:30"
-    end_at: "19:30"
-    type: kibele_dreamform
-    base_image_path: images/base/square-bird.jpg
-    cancelled: true
   - at: 2026-01-17
     start_at: "21:00"
     end_at: "22:00"
