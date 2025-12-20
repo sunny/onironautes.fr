@@ -17,11 +17,14 @@ class Image
     generated_large_path if File.exist?(generated_large_path)
   end
 
-  def generate!
+  def generate_all!
     FileUtils.rm_rf(generated_path)
-    generate
-
     FileUtils.rm_rf(generated_large_path)
+    generate_all
+  end
+
+  def generate_missing
+    generate
     generate_large
   end
 
@@ -67,8 +70,8 @@ class Image
   end
 
   def formatted_date = event.at.strftime("%d.%m.%Y")
-  def generated_path = "images/events/#{event.type}-#{event.at}.jpg"
-  def generated_large_path = "images/events/#{event.type}-#{event.at}-large.jpg"
+  def generated_path = "images/events/#{event.at}-#{event.type}.jpg"
+  def generated_large_path = "images/events/#{event.at}-#{event.type}-large.jpg"
 
   def cmd(command)
     puts command

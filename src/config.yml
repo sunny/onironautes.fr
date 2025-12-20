@@ -3,7 +3,7 @@ events:
     start_at: "21:00"
     end_at: "22:00"
     type: kibele_dreamform
-    base_image_path: images/base/square-astronaut.jpg
+    base_image_path: images/base/square-fish.jpg
   - at: 2026-02-20
     start_at: "19:30"
     end_at: "20:30"
@@ -13,7 +13,7 @@ events:
     start_at: "21:00"
     end_at: "22:00"
     type: kibele_dreamform
-    base_image_path: images/base/square-parrot.jpg
+    base_image_path: images/base/square-astronaut.jpg
 
 types:
   kibele_dreamform:
