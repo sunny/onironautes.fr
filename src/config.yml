@@ -2,7 +2,7 @@ events:
   - at: 2026-01-17
     start_at: "21:00"
     end_at: "22:00"
-    type: kibele_dreamform
+    type: kibele_reveil
     base_image_path: images/base/square-fish.jpg
   - at: 2026-02-20
     start_at: "19:30"
@@ -16,6 +16,19 @@ events:
     base_image_path: images/base/square-astronaut.jpg
 
 types:
+  kibele_reveil:
+    name: Spectacle d’impro « Réveil »
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Réveil », pour vous emporter dans le monde des rêves, entre deux sonneries de réveil.
+    location_name: Kibélé
+    location_prefix: "Au "
+    address: 12 Rue de l’Échiquier, 75010 Paris
+    location_url: https://kibele.fr/
+    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
+    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
+    image_title: KIBÉLÉ
+    image_path: venues/kibele.png
+
   kibele_dreamform:
     name: Spectacle d’impro « Dreamform »
     calendar_name: Spectacle d’impro des Onironautes
