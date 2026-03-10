@@ -2,4 +2,10 @@
 
 require File.join(__dir__, "../src/event")
 
-Event.all.each { _1.image.generate_all! }
+images = Event.all.map(&:image)
+
+if ARGV[0] == "--missing"
+  images.each(&:generate_missing)
+else
+  images.each(&:generate_all!)
+end
