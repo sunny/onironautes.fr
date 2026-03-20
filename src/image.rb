@@ -30,6 +30,7 @@ class Image
 
   def generate
     return if File.exist?(generated_path)
+    return unless event.base_image_path
 
     cmd "magick #{event.base_image_path} " \
         "-resize 1000x1000 " \
@@ -54,6 +55,7 @@ class Image
 
   def generate_large
     return if File.exist?(generated_large_path)
+    return unless event.base_image_path
 
     background = `magick #{generated_path} -format "%[pixel:p{0,0}]" info:-`
 

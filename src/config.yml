@@ -14,6 +14,10 @@ events:
     end_at: "22:00"
     type: kibele_dreamform
     base_image_path: images/base/square-astronaut.jpg
+  - at: 2026-04-15
+    start_at: "19:00"
+    end_at: "20:00"
+    type: paris_anim_14
 
 types:
   kibele_reveil:
@@ -27,7 +31,7 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image_title: KIBÉLÉ
-    image_path: venues/kibele.png
+    image_path: images/venues/kibele.png
 
   kibele_dreamform:
     name: Spectacle d’impro « Dreamform »
@@ -40,7 +44,7 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image_title: KIBÉLÉ
-    image_path: venues/kibele.png
+    image_path: images/venues/kibele.png
 
   kibele_30:
     name: Spectacle d’impro « 30 »
@@ -53,7 +57,7 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image_title: KIBÉLÉ
-    image_path: venues/kibele.png
+    image_path: images/venues/kibele.png
 
   kibele_poulpes:
     name: Rencontre franco-belge avec l’équipe des Poulpes Fiction de Liège
@@ -66,7 +70,7 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image_title: KIBÉLÉ
-    image_path: venues/kibele.png
+    image_path: images/venues/kibele.png
 
   paris_anim_14:
     name: Spectacle d’impro « Dreamform »
@@ -79,4 +83,4 @@ types:
     map_url: "https://cartes.app/?allez=Centre%20d'Animation%20Marc-Sangnier%7Cn2478283323%7C2.3097%7C48.8254"
     entry: Entrée libre, 1h environ.
     image_title: PARIS ANIM
-    image_path: venues/paris-anim-14.png
+    image_path: images/venues/paris-anim-14.png
