@@ -2,67 +2,72 @@ events:
   - at: 2026-01-17
     start_at: "21:00"
     end_at: "22:00"
-    type: kibele_reveil
+    venue: kibele
+    type: reveil
     base_image_path: images/base/square-fish.jpg
   - at: 2026-02-20
     start_at: "19:30"
     end_at: "20:30"
-    type: kibele_dreamform
+    venue: kibele
+    type: dreamform
     base_image_path: images/base/square-baloon.jpg
   - at: 2026-03-20
     start_at: "21:00"
     end_at: "22:00"
-    type: kibele_dreamform
+    venue: kibele
+    type: dreamform
     base_image_path: images/base/square-astronaut.jpg
   - at: 2026-04-15
     start_at: "19:00"
     end_at: "20:00"
-    type: paris_anim_14
+    venue: paris_anim_14
+    type: rencontre_cats
+  - at: 2026-05-26
+    start_at: "20:00"
+    end_at: "21:00"
+    venue: tdtf
+    type: dreamform
 
 types:
-  kibele_reveil:
+  dreamform:
+    name: Spectacle d’impro « Dreamform »
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par le public, pour vous emporter dans le monde des rêves.
+
+  reveil:
     name: Spectacle d’impro « Réveil »
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « Réveil », pour vous emporter dans le monde des rêves, entre deux sonneries de réveil.
-    location_name: Kibélé
-    location_prefix: "Au "
-    address: 12 Rue de l’Échiquier, 75010 Paris
-    location_url: https://kibele.fr/
-    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
-    image_title: KIBÉLÉ
-    image_path: images/venues/kibele.png
 
-  kibele_dreamform:
-    name: Spectacle d’impro « Dreamform »
-    calendar_name: Spectacle d’impro des Onironautes
-    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
-    location_name: Kibélé
-    location_prefix: "Au "
-    address: 12 Rue de l’Échiquier, 75010 Paris
-    location_url: https://kibele.fr/
-    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
-    image_title: KIBÉLÉ
-    image_path: images/venues/kibele.png
-
-  kibele_30:
+  trente:
     name: Spectacle d’impro « 30 »
     calendar_name: Spectacle d’impro des Onironautes
     description: Spectacle d’improvisation théâtrale « 30 », où trente improvisations devront être jouées, pas une de plus, pas une de moins.
-    location_name: Kibélé
-    location_prefix: "Au "
-    address: 12 Rue de l’Échiquier, 75010 Paris
-    location_url: https://kibele.fr/
-    map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
-    entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
-    image_title: KIBÉLÉ
-    image_path: images/venues/kibele.png
 
-  kibele_poulpes:
+  rencontre_poulpes:
     name: Rencontre franco-belge avec l’équipe des Poulpes Fiction de Liège
     calendar_name: Rencontre d’impro Poulpes et Onironautes
     description: L’équipe des Pouples Fiction vient tout droit de Liège en Belgique pour rencontrer les Onironautes.
+
+  rencontre_cats:
+    name: Rencontre d’impro Onironautes vs CATS
+    calendar_name: Spectacle d’impro des Onironautes
+    description: Spectacle d’improvisation théâtrale, match rencontre des Onironautes et des CATS.
+
+venues:
+  tdtf:
+    location_name: TDTF
+    location_prefix: "Au "
+    address: 43 rue Cavendish, 75019 Paris
+    metro: Laumière
+    location_url: https://tdtfparis.fr/
+    map_url: "https://cartes.app/?allez=TDTF%7Cn2918045577%7C2.37871%7C48.88440"
+    entry: Entrée libre, consommation obligatoire, salle accessible PMR, 1h environ.
+    image_title: TDTF
+    image_alt: TDTF Paris
+    image_path: images/venues/tdtf.webp
+
+  kibele:
     location_name: Kibélé
     location_prefix: "Au "
     address: 12 Rue de l’Échiquier, 75010 Paris
@@ -70,12 +75,10 @@ types:
     map_url: "https://cartes.app/?allez=Kibele%7Cn3525954557%7C2.3521%7C48.8713"
     entry: Entrée libre, consommation obligatoire, salle au sous-sol, 1h environ.
     image_title: KIBÉLÉ
+    image_alt: Le Kibélé
     image_path: images/venues/kibele.png
 
   paris_anim_14:
-    name: Spectacle d’impro « Dreamform »
-    calendar_name: Spectacle d’impro des Onironautes
-    description: Spectacle d’improvisation théâtrale « Dreamform », inspiré par la vie du public, pour vous emporter dans le monde des rêves.
     location_name: Centre Paris Anim’ Marc Sangnier
     location_prefix: "Au "
     address: 20/24 avenue Marc Sangnier, 75014 Paris, France
@@ -83,4 +86,5 @@ types:
     map_url: "https://cartes.app/?allez=Centre%20d'Animation%20Marc-Sangnier%7Cn2478283323%7C2.3097%7C48.8254"
     entry: Entrée libre, 1h environ.
     image_title: PARIS ANIM
+    image_alt: Paris Anim’
     image_path: images/venues/paris-anim-14.png

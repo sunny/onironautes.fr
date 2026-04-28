@@ -8,7 +8,7 @@ class Image
   def path
     if File.exist?(generated_path)
       generated_path
-    elsif File.exist?(event.image_path)
+    elsif event.image_path && File.exist?(event.image_path)
       event.image_path
     end
   end
@@ -72,8 +72,14 @@ class Image
   end
 
   def formatted_date = event.at.strftime("%d.%m.%Y")
-  def generated_path = "images/events/#{event.at}-#{event.type}.jpg"
-  def generated_large_path = "images/events/#{event.at}-#{event.type}-large.jpg"
+
+  def generated_path
+    "images/events/#{event.at}-#{event.venue}-#{event.type}.jpg"
+  end
+
+  def generated_large_path
+    "images/events/#{event.at}-#{event.venue}-#{event.type}-large.jpg"
+  end
 
   def cmd(command)
     puts command

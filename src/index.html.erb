@@ -253,14 +253,23 @@
             <div class="event__grid">
               <% if event.image.path && !event.cancelled? %>
                 <div class="event__illustration">
-                  <a href="<%= event.image.large_path || event.image.path %>">
+                  <% if event.image.large_path %>
+                    <a href="<%= event.image.large_path %>">
+                      <img
+                        src="/<%= event.image.path %>"
+                        width="200"
+                        height="200"
+                        alt="<%= event.image_alt %>"
+                      />
+                    </a>
+                  <% else %>
                     <img
                       src="/<%= event.image.path %>"
                       width="200"
                       height="200"
                       alt=""
                     />
-                  </a>
+                  <% end %>
                 </div>
               <% end %>
 
