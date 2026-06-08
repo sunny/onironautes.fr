@@ -27,6 +27,11 @@ events:
     end_at: "21:00"
     venue: tdtf
     type: dreamform
+  - at: 2026-06-26
+    start_at: "21:00"
+    end_at: "22:00"
+    venue: kibele
+    type: dreamform
 
 types:
   dreamform:
