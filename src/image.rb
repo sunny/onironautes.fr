@@ -55,7 +55,7 @@ class Image
 
   def generate_large
     return if File.exist?(generated_large_path)
-    return unless event.base_image_path
+    return unless File.exist?(generated_path)
 
     background = `magick #{generated_path} -format "%[pixel:p{0,0}]" info:-`
 
