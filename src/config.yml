@@ -32,6 +32,7 @@ events:
     end_at: "22:00"
     venue: kibele
     type: dreamform
+    cancelled: true
 
 types:
   dreamform:
