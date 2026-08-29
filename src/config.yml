@@ -1,38 +1,4 @@
 events:
-  - at: 2026-01-17
-    start_at: "21:00"
-    end_at: "22:00"
-    venue: kibele
-    type: reveil
-    base_image_path: images/base/square-fish.jpg
-  - at: 2026-02-20
-    start_at: "19:30"
-    end_at: "20:30"
-    venue: kibele
-    type: dreamform
-    base_image_path: images/base/square-baloon.jpg
-  - at: 2026-03-20
-    start_at: "21:00"
-    end_at: "22:00"
-    venue: kibele
-    type: dreamform
-    base_image_path: images/base/square-astronaut.jpg
-  - at: 2026-04-15
-    start_at: "19:00"
-    end_at: "20:00"
-    venue: paris_anim_14
-    type: rencontre_cats
-  - at: 2026-05-26
-    start_at: "20:00"
-    end_at: "21:00"
-    venue: tdtf
-    type: dreamform
-  - at: 2026-06-26
-    start_at: "21:00"
-    end_at: "22:00"
-    venue: kibele
-    type: dreamform
-    cancelled: true
   - at: 2026-10-06
     start_at: "20:00"
     end_at: "21:00"
