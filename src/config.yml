@@ -33,6 +33,16 @@ events:
     venue: kibele
     type: dreamform
     cancelled: true
+  - at: 2026-10-06
+    start_at: "20:00"
+    end_at: "21:00"
+    venue: tdtf
+    type: dreamform
+  - at: 2026-12-08
+    start_at: "20:00"
+    end_at: "21:00"
+    venue: tdtf
+    type: dreamform
 
 types:
   dreamform:
